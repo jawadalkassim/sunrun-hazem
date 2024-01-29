@@ -77,8 +77,8 @@
                 
                 <div id="privacy-php">
                     <h2 id="privacy-php-top">Privacy Policy</h2>
-                    <p>Effective June 1st, 2023</p>
-                    <p>Last Updated June 6th, 2023</p>
+                    <p>Effective June 1st, 2024</p>
+                    <p>Last Updated June 6th, 2024</p>
                     <h1>Privacy Policy for EcomfyLead</h1>
 
                     <p>At gogreenandsave.net, accessible from https://gogreenandsave.net/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by gogreenandsave.net and how we use it.</p>

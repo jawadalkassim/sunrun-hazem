@@ -9,87 +9,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- meta content for search -->
     <link rel="icon" type="image/png" href="/assets/images/Logo3.png">
-    <meta name="facebook-domain-verification" content="vpu4sozxe6l3bzb24q13q7937p2myf" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <link rel="preload" as="style" href="./assets/css/bootstrap.min.css">
-    <link rel="preload" as="style" href="./assets/css/style.min.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <link rel="preload" as="style" href="/assets/css/bootstrap.min.css">
+    <link rel="preload" as="style" href="/assets/css/style.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-    <script>
-        window.ADDRESS_VALIDATION_SKIP = true;
-        window.s1 = '';
-        window.s2 = '';
-        window.s3 = '';
-        window.s4 = '';
-        window.s5 = '';
-        window.uid = '10f5040a07ade20ba37e0743740983c5f99907860780113b1251b27ef19adef1';
-    </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11110630683"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'AW-11110630683');
-    </script>
+ 
+
+
+
+
 
 
     <script>
-        function getCookie(name) {
-            let value = `; ${document.cookie}`;
-            let parts = value.split(`; ${name}=`);
-            return parts.pop().split(';').shift().split("|").shift();
-        }
-    </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11110660362"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-11110660362');
-    </script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XX1DLGG5VV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-XX1DLGG5VV');
-    </script>
-
-
-    <script>
-        // This sample uses the Autocomplete widget to help the user select a
-        // place, then it retrieves the address components associated with that
-        // place, and then it populates the form fields with those details.
-        // This sample requires the Places library. Include the libraries=places
-        // parameter when you first load the API. For example:
-        // <script
-        // src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-   //     var queryString = window.location.search;
-     //   var urlParams = new URLSearchParams(queryString);
-      //  var transaction = urlParams.get("oid");
-       // var affiliate = urlParams.get("affid");
-
-
+window._loq =[]
 
         let placeSearch;
         let autocomplete;
@@ -103,35 +41,26 @@
             postal_code: "short_name",
         };
 
-        function initAutocomplete() {
-            if (!window.ADDRESS_VALIDATION_SKIP) {
-                // Create the autocomplete object, restricting the search predictions to
-                // geographical location types.
-                autocomplete = new google.maps.places.Autocomplete(
-                    document.getElementById("full_address"), {
-                        types: ["address"],
-                        componentRestrictions: {
-                            country: 'us'
-                        }
-                    }
-                );
-                // Avoid paying for data that you don't need by restricting the set of
-                // place fields that are returned to just the address components.
-                autocomplete.setFields(["address_component"]);
-                // When the user selects an address from the drop-down, populate the
-                // address fields in the form.
-                autocomplete.addListener("place_changed", fillInAddress);
-            }
-        }
+        // function initAutocomplete() {
+        //     if (!window.ADDRESS_VALIDATION_SKIP) {
+        //         autocomplete = new google.maps.places.Autocomplete(
+        //             document.getElementById("full_address"), {
+        //                 types: ["address"],
+        //                 componentRestrictions: {
+        //                     country: 'us'
+        //                 }
+        //             }
+        //         );
+               
+        //         autocomplete.setFields(["address_component"]);
+           
+        //         autocomplete.addListener("place_changed", fillInAddress);
+        //     }
+        // }
 
         function phoneFormat(input) {
-            // Strip all characters from the input except digits
             input = input.replace(/\D/g, '');
-
-            // Trim the remaining input to ten characters, to preserve phone number format
             input = input.substring(0, 10);
-
-            // Based upon the length of the string, we add formatting as necessary
             var size = input.length;
             if (size == 0) {
                 input = input;
@@ -145,257 +74,212 @@
             return input;
         }
 
-        function fillInAddress() {
-            $("#street-address-verify").hide();
-            try {
-                // Get the place details from the autocomplete object.
-                const place = autocomplete.getPlace();
+        // function fillInAddress() {
+        //     $("#street-address-verify").hide();
+        //     try {
+        //         const place = autocomplete.getPlace();
 
-                for (const component in componentForm) {
-                    document.getElementById(component).value = "";
-                }
+        //         for (const component in componentForm) {
+        //             document.getElementById(component).value = "";
+        //         }
 
-                // Get each component of the address from the place details,
-                // and then fill-in the corresponding field on the form.
-                for (const component of place.address_components) {
-                    const addressType = component.types[0];
+        //         for (const component of place.address_components) {
+        //             const addressType = component.types[0];
 
-                    if (componentForm[addressType]) {
-                        const val = component[componentForm[addressType]];
-                        document.getElementById(addressType).value = val;
-                    }
-                }
-            } catch (e) {
-                // do nothing
-            }
-            $(".btn-next, .quick-next").removeAttr('disabled');
-        }
+        //             if (componentForm[addressType]) {
+        //                 const val = component[componentForm[addressType]];
+        //                 document.getElementById(addressType).value = val;
+        //             }
+        //         }
+        //     } catch (e) {
+        //     }
+        //     $(".btn-next, .quick-next").removeAttr('disabled');
+        // }
 
         function getState(zipString) {
-            /* Ensure param is a string to prevent unpredictable parsing results */
             if (typeof zipString !== 'string') {
-                // console.log('Must pass the zipcode as a string.');
                 return;
             }
 
-            /* Ensure we have exactly 5 characters to parse */
             if (zipString.length !== 5) {
-                // console.log('Must pass a 5-digit zipcode.');
                 return;
             }
 
-            /* Ensure we don't parse strings starting with 0 as octal values */
             const zipcode = parseInt(zipString, 10);
 
             let st;
             let state;
 
-            /* Code cases alphabetized by state */
             if (zipcode >= 35000 && zipcode <= 36999) {
-                st = 'AL';
-                state = 'Alabama';
-            } else if (zipcode >= 99500 && zipcode <= 99999) {
-                st = 'AK';
-                state = 'Alaska';
-            } else if (zipcode >= 85000 && zipcode <= 86999) {
-                st = 'AZ';
-                state = 'Arizona';
-            } else if (zipcode >= 71600 && zipcode <= 72999) {
-                st = 'AR';
-                state = 'Arkansas';
-            } else if (zipcode >= 90000 && zipcode <= 96699) {
-                st = 'CA';
-                state = 'California';
-            } else if (zipcode >= 80000 && zipcode <= 81999) {
-                st = 'CO';
-                state = 'Colorado';
-            } else if (zipcode >= 6000 && zipcode <= 6999) {
-                st = 'CT';
-                state = 'Connecticut';
-            } else if (zipcode >= 19700 && zipcode <= 19999) {
-                st = 'DE';
-                state = 'Delaware';
-            } else if (zipcode >= 32000 && zipcode <= 34999) {
-                st = 'FL';
-                state = 'Florida';
-            } else if (zipcode >= 30000 && zipcode <= 31999) {
-                st = 'GA';
-                state = 'Georgia';
-            } else if (zipcode >= 96700 && zipcode <= 96999) {
-                st = 'HI';
-                state = 'Hawaii';
-            } else if (zipcode >= 83200 && zipcode <= 83999) {
-                st = 'ID';
-                state = 'Idaho';
-            } else if (zipcode >= 60000 && zipcode <= 62999) {
-                st = 'IL';
-                state = 'Illinois';
-            } else if (zipcode >= 46000 && zipcode <= 47999) {
-                st = 'IN';
-                state = 'Indiana';
-            } else if (zipcode >= 50000 && zipcode <= 52999) {
-                st = 'IA';
-                state = 'Iowa';
-            } else if (zipcode >= 66000 && zipcode <= 67999) {
-                st = 'KS';
-                state = 'Kansas';
-            } else if (zipcode >= 40000 && zipcode <= 42999) {
-                st = 'KY';
-                state = 'Kentucky';
-            } else if (zipcode >= 70000 && zipcode <= 71599) {
-                st = 'LA';
-                state = 'Louisiana';
-            } else if (zipcode >= 3900 && zipcode <= 4999) {
-                st = 'ME';
-                state = 'Maine';
-            } else if (zipcode >= 20600 && zipcode <= 21999) {
-                st = 'MD';
-                state = 'Maryland';
-            } else if (zipcode >= 1000 && zipcode <= 2799) {
-                st = 'MA';
-                state = 'Massachusetts';
-            } else if (zipcode >= 48000 && zipcode <= 49999) {
-                st = 'MI';
-                state = 'Michigan';
-            } else if (zipcode >= 55000 && zipcode <= 56999) {
-                st = 'MN';
-                state = 'Minnesota';
-            } else if (zipcode >= 38600 && zipcode <= 39999) {
-                st = 'MS';
-                state = 'Mississippi';
-            } else if (zipcode >= 63000 && zipcode <= 65999) {
-                st = 'MO';
-                state = 'Missouri';
-            } else if (zipcode >= 59000 && zipcode <= 59999) {
-                st = 'MT';
-                state = 'Montana';
-            } else if (zipcode >= 27000 && zipcode <= 28999) {
-                st = 'NC';
-                state = 'North Carolina';
-            } else if (zipcode >= 58000 && zipcode <= 58999) {
-                st = 'ND';
-                state = 'North Dakota';
-            } else if (zipcode >= 68000 && zipcode <= 69999) {
-                st = 'NE';
-                state = 'Nebraska';
-            } else if (zipcode >= 88900 && zipcode <= 89999) {
-                st = 'NV';
-                state = 'Nevada';
-            } else if (zipcode >= 3000 && zipcode <= 3899) {
-                st = 'NH';
-                state = 'New Hampshire';
-            } else if (zipcode >= 7000 && zipcode <= 8999) {
-                st = 'NJ';
-                state = 'New Jersey';
-            } else if (zipcode >= 87000 && zipcode <= 88499) {
-                st = 'NM';
-                state = 'New Mexico';
-            } else if (zipcode >= 10000 && zipcode <= 14999) {
-                st = 'NY';
-                state = 'New York';
-            } else if (zipcode >= 43000 && zipcode <= 45999) {
-                st = 'OH';
-                state = 'Ohio';
-            } else if (zipcode >= 73000 && zipcode <= 74999) {
-                st = 'OK';
-                state = 'Oklahoma';
-            } else if (zipcode >= 97000 && zipcode <= 97999) {
-                st = 'OR';
-                state = 'Oregon';
-            } else if (zipcode >= 15000 && zipcode <= 19699) {
-                st = 'PA';
-                state = 'Pennsylvania';
-            } else if (zipcode >= 300 && zipcode <= 999) {
-                st = 'PR';
-                state = 'Puerto Rico';
-            } else if (zipcode >= 2800 && zipcode <= 2999) {
-                st = 'RI';
-                state = 'Rhode Island';
-            } else if (zipcode >= 29000 && zipcode <= 29999) {
-                st = 'SC';
-                state = 'South Carolina';
-            } else if (zipcode >= 57000 && zipcode <= 57999) {
-                st = 'SD';
-                state = 'South Dakota';
-            } else if (zipcode >= 37000 && zipcode <= 38599) {
-                st = 'TN';
-                state = 'Tennessee';
-            } else if ((zipcode >= 75000 && zipcode <= 79999) || (zipcode >= 88500 && zipcode <= 88599)) {
-                st = 'TX';
-                state = 'Texas';
-            } else if (zipcode >= 84000 && zipcode <= 84999) {
-                st = 'UT';
-                state = 'Utah';
-            } else if (zipcode >= 5000 && zipcode <= 5999) {
-                st = 'VT';
-                state = 'Vermont';
-            } else if (zipcode >= 22000 && zipcode <= 24699) {
-                st = 'VA';
-                state = 'Virginia';
-            } else if (zipcode >= 20000 && zipcode <= 20599) {
-                st = 'DC';
-                state = 'Washington DC';
-            } else if (zipcode >= 98000 && zipcode <= 99499) {
-                st = 'WA';
-                state = 'Washington';
-            } else if (zipcode >= 24700 && zipcode <= 26999) {
-                st = 'WV';
-                state = 'West Virginia';
-            } else if (zipcode >= 53000 && zipcode <= 54999) {
-                st = 'WI';
-                state = 'Wisconsin';
-            } else if (zipcode >= 82000 && zipcode <= 83199) {
-                st = 'WY';
-                state = 'Wyoming';
-            } else {
-                st = 'none';
-                state = 'none';
-            }
+    st = 'AL';
+    state = 'Alabama';
+} else if (zipcode >= 99500 && zipcode <= 99999) {
+    st = 'AK';
+    state = 'Alaska';
+} else if (zipcode >= 85000 && zipcode <= 86999) {
+    st = 'AZ';
+    state = 'Arizona';
+} else if (zipcode >= 71600 && zipcode <= 72999) {
+    st = 'AR';
+    state = 'Arkansas';
+} else if (zipcode >= 90000 && zipcode <= 96699) {
+    st = 'CA';
+    state = 'California';
+} else if (zipcode >= 80000 && zipcode <= 81999) {
+    st = 'CO';
+    state = 'Colorado';
+} else if (zipcode >= 6000 && zipcode <= 6999) {
+    st = 'CT';
+    state = 'Connecticut';
+} else if (zipcode >= 19700 && zipcode <= 19999) {
+    st = 'DE';
+    state = 'Delaware';
+} else if (zipcode >= 32000 && zipcode <= 34999) {
+    st = 'FL';
+    state = 'Florida';
+} else if (zipcode >= 30000 && zipcode <= 31999) {
+    st = 'GA';
+    state = 'Georgia';
+} else if (zipcode >= 96700 && zipcode <= 96999) {
+    st = 'HI';
+    state = 'Hawaii';
+} else if (zipcode >= 83200 && zipcode <= 83999) {
+    st = 'ID';
+    state = 'Idaho';
+} else if (zipcode >= 60000 && zipcode <= 62999) {
+    st = 'IL';
+    state = 'Illinois';
+} else if (zipcode >= 46000 && zipcode <= 47999) {
+    st = 'IN';
+    state = 'Indiana';
+} else if (zipcode >= 50000 && zipcode <= 52999) {
+    st = 'IA';
+    state = 'Iowa';
+} else if (zipcode >= 66000 && zipcode <= 67999) {
+    st = 'KS';
+    state = 'Kansas';
+} else if (zipcode >= 40000 && zipcode <= 42999) {
+    st = 'KY';
+    state = 'Kentucky';
+} else if (zipcode >= 70000 && zipcode <= 71599) {
+    st = 'LA';
+    state = 'Louisiana';
+} else if (zipcode >= 3900 && zipcode <= 4999) {
+    st = 'ME';
+    state = 'Maine';
+} else if (zipcode >= 20600 && zipcode <= 21999) {
+    st = 'MD';
+    state = 'Maryland';
+} else if (zipcode >= 1000 && zipcode <= 2799) {
+    st = 'MA';
+    state = 'Massachusetts';
+} else if (zipcode >= 48000 && zipcode <= 49999) {
+    st = 'MI';
+    state = 'Michigan';
+} else if (zipcode >= 55000 && zipcode <= 56999) {
+    st = 'MN';
+    state = 'Minnesota';
+} else if (zipcode >= 38600 && zipcode <= 39999) {
+    st = 'MS';
+    state = 'Mississippi';
+} else if (zipcode >= 63000 && zipcode <= 65999) {
+    st = 'MO';
+    state = 'Missouri';
+} else if (zipcode >= 59000 && zipcode <= 59999) {
+    st = 'MT';
+    state = 'Montana';
+} else if (zipcode >= 27000 && zipcode <= 28999) {
+    st = 'NC';
+    state = 'North Carolina';
+} else if (zipcode >= 58000 && zipcode <= 58999) {
+    st = 'ND';
+    state = 'North Dakota';
+} else if (zipcode >= 68000 && zipcode <= 69999) {
+    st = 'NE';
+    state = 'Nebraska';
+} else if (zipcode >= 88900 && zipcode <= 89999) {
+    st = 'NV';
+    state = 'Nevada';
+} else if (zipcode >= 3000 && zipcode <= 3899) {
+    st = 'NH';
+    state = 'New Hampshire';
+} else if (zipcode >= 7000 && zipcode <= 8999) {
+    st = 'NJ';
+    state = 'New Jersey';
+} else if (zipcode >= 87000 && zipcode <= 88499) {
+    st = 'NM';
+    state = 'New Mexico';
+} else if (zipcode >= 10000 && zipcode <= 14999) {
+    st = 'NY';
+    state = 'New York';
+} else if (zipcode >= 43000 && zipcode <= 45999) {
+    st = 'OH';
+    state = 'Ohio';
+} else if (zipcode >= 73000 && zipcode <= 74999) {
+    st = 'OK';
+    state = 'Oklahoma';
+} else if (zipcode >= 97000 && zipcode <= 97999) {
+    st = 'OR';
+    state = 'Oregon';
+} else if (zipcode >= 15000 && zipcode <= 19699) {
+    st = 'PA';
+    state = 'Pennsylvania';
+} else if (zipcode >= 300 && zipcode <= 999) {
+    st = 'PR';
+    state = 'Puerto Rico';
+} else if (zipcode >= 2800 && zipcode <= 2999) {
+    st = 'RI';
+    state = 'Rhode Island';
+} else if (zipcode >= 29000 && zipcode <= 29999) {
+    st = 'SC';
+    state = 'South Carolina';
+} else if (zipcode >= 57000 && zipcode <= 57999) {
+    st = 'SD';
+    state = 'South Dakota';
+} else if (zipcode >= 37000 && zipcode <= 38599) {
+    st = 'TN';
+    state = 'Tennessee';
+} else if ((zipcode >= 75000 && zipcode <= 79999) || (zipcode >= 88500 && zipcode <= 88599)) {
+    st = 'TX';
+    state = 'Texas';
+} else if (zipcode >= 84000 && zipcode <= 84999) {
+    st = 'UT';
+    state = 'Utah';
+} else if (zipcode >= 5000 && zipcode <= 5999) {
+    st = 'VT';
+    state = 'Vermont';
+} else if (zipcode >= 22000 && zipcode <= 24699) {
+    st = 'VA';
+    state = 'Virginia';
+} else if (zipcode >= 20000 && zipcode <= 20599) {
+    st = 'DC';
+    state = 'Washington DC';
+} else if (zipcode >= 98000 && zipcode <= 99499) {
+    st = 'WA';
+    state = 'Washington';
+} else if (zipcode >= 24700 && zipcode <= 26999) {
+    st = 'WV';
+    state = 'West Virginia';
+} else if (zipcode >= 53000 && zipcode <= 54999) {
+    st = 'WI';
+    state = 'Wisconsin';
+} else if (zipcode >= 82000 && zipcode <= 83199) {
+    st = 'WY';
+    state = 'Wyoming';
+} else {
+    st = 'none';
+    state = 'none';
+}
             document.getElementById('state').value = state;
             return st;
         }
 
-        /**
-         * Set referral cookies
-         */
-        (function() {
-            function setCookie(cname, cvalue, exdays) {
-                var d = new Date();
-                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-                var expires = "expires=" + d.toUTCString();
-                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-            }
-            setCookie("aid", '29928', 30);
-        })();
+  
+      
     </script>
 
 
-    <script>
-        const _echo_get = window._echo_get = {
-            "a": "29928",
-            "c": "47901",
-            "lp_campid": "C414B2A5CABC8B7B",
-            "lp_campkey": "tN8H9FGRrChgp3M7Jw46"
-        };
-        const _echo_post = window._echo_post = [];
-    </script>
 
-    <!-- <script>
-        var ipadr;
-
-        fetch("https://pro.ip-api.com/json/?key=OhSlXoSuuSkHptR").then(x => x.json()).then(x => {
-
-            ipadr = x.query;
-            console.log(ipadr);
-
-        }).catch(function(err) {
-            console.log(err)
-        })
-    </script> -->
-
-    <script>
-        
-    </script>
 </head>
 
 <body class="v2-page en">
@@ -527,6 +411,8 @@
                                 <fieldset id="form-step2" class="form-steps fieldset-1" data-step="2" style="display: none;" data-tag="zip">
                                     <legend hidden="true">zipcode</legend>
                                     <h3 class="form_box-question">What is your zip code?</h3>
+                                    <h5 class="form_box-question">Please make sure to type 5-digits number</h5>
+
                                     <div class="form-group">
                                         <label style="visibility: hidden; position: absolute;" for="zip">Zip Code</label>
                                         <input id="zip" class="form-control zipcode" type="tel" name="zip_code" pattern="[0-9]{5}" title="Enter Your ZIP Code" maxlength="5" minlength="5" placeholder="Enter Your ZIP Code" value="" required>
@@ -691,8 +577,8 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                <fieldset id="form-step9" class="form-steps fieldset-8" data-step="9" style="display: none;" data-tag="address">
-                                    <legend hidden="true">Address Name</legend>
+                                <fieldset id="form-step10" class="form-steps fieldset-8" data-step="10" style="display: none;" data-tag="address">
+                                    <legend hidden="true">Street Name</legend>
                                     <h3 class="form_box-question">Where do you want the solar panels installed (street address)?</h3>
                                     <div class="form-group" id="street_address">
                                         <input id="address" class="form-control" type="text" name="full_address" placeholder="Address" value="" required>
@@ -707,7 +593,7 @@
                                         <div class="col colback"><a class="btn btn-link btn-back">Back</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q9-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Next</span>
+                                                <button id="q10-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Next</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -715,74 +601,8 @@
                                 </fieldset>
 
       
-<!-- <fieldset id="form-step10" class="form-steps fieldset-9" data-step="10" style="display: none;" data-tag="state">
-    <legend hidden="true">State</legend>
-    <h3 class="form_box-question">Select State</h3>
-    <div class="form-group" id="state_dropdown">
-        <select id="state" class="form-control" name="state" required>
-            <option value="" disabled selected>Select your state</option>
-            <option value="Alabama">Alabama</option>
-            <option value="Alaska">Alaska</option>
-            <option value="Arizona">Arizona</option>
-            <option value="Arkansas">Arkansas</option>
-            <option value="California">California</option>
-            <option value="Colorado">Colorado</option>
-            <option value="Connecticut">Connecticut</option>
-            <option value="Delaware">Delaware</option>
-            <option value="Florida">Florida</option>
-            <option value="Georgia">Georgia</option>
-            <option value="Hawaii">Hawaii</option>
-            <option value="Idaho">Idaho</option>
-            <option value="Illinois">Illinois</option>
-            <option value="Indiana">Indiana</option>
-            <option value="Iowa">Iowa</option>
-            <option value="Kansas">Kansas</option>
-            <option value="Kentucky">Kentucky</option>
-            <option value="Louisiana">Louisiana</option>
-            <option value="Maine">Maine</option>
-            <option value="Maryland">Maryland</option>
-            <option value="Massachusetts">Massachusetts</option>
-            <option value="Michigan">Michigan</option>
-            <option value="Minnesota">Minnesota</option>
-            <option value="Mississippi">Mississippi</option>
-            <option value="Missouri">Missouri</option>
-            <option value="Montana">Montana</option>
-            <option value="Nebraska">Nebraska</option>
-            <option value="Nevada">Nevada</option>
-            <option value="New Hampshire">New Hampshire</option>
-            <option value="New Jersey">New Jersey</option>
-            <option value="New Mexico">New Mexico</option>
-            <option value="New York">New York</option>
-            <option value="North Carolina">North Carolina</option>
-            <option value="North Dakota">North Dakota</option>
-            <option value="Ohio">Ohio</option>
-            <option value="Oklahoma">Oklahoma</option>
-            <option value="Oregon">Oregon</option>
-            <option value="Pennsylvania">Pennsylvania</option>
-            <option value="Rhode Island">Rhode Island</option>
-            <option value="South Carolina">South Carolina</option>
-            <option value="South Dakota">South Dakota</option>
-            <option value="Tennessee">Tennessee</option>
-            <option value="Texas">Texas</option>
-            <option value="Utah">Utah</option>
-            <option value="Vermont">Vermont</option>
-            <option value="Virginia">Virginia</option>
-            <option value="Washington">Washington</option>
-            <option value="West Virginia">West Virginia</option>
-            <option value="Wisconsin">Wisconsin</option>
-            <option value="Wyoming">Wyoming</option>
-        </select>
-      
-    <div class="row">
-        <div class="col colback"><a class="btn btn-link btn-back">Back</a></div>
-        <div class="col">
-            <div class="form-btns ml-auto text-right">
-                <button id="q10-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Next</span></button>
-            </div>
-        </div>
-    </div>
-</fieldset> -->
-                                <fieldset id="form-step10" class="form-steps fieldset-9" data-step="10" style="display: none;" data-tag="phone">
+
+                                <fieldset id="form-step11" class="form-steps fieldset-10" data-step="11" style="display: none;" data-tag="phone">
                                     <legend hidden="true">Phone</legend>
                                     <p class="form_box-desc">What phone number can we reach you at?</p>
                                     <div class="form-group">
@@ -802,7 +622,7 @@
                                         <!-- <div class="col colback"><a class="btn btn-link btn-back">Back</a></div> -->
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right btn-last-submit">
-                                                <button id="q10-next" class="btn form-btn btn-next btn-final" type="button"><span class="btn-text">Next</span>
+                                                <button id="q11-next" class="btn form-btn btn-next btn-final" type="button"><span class="btn-text">Next</span>
                                                 </button>
                                                 <button id="q10-next-loading" class="btn form-btn btn-next-loading btn-final hide" type="button" disabled><span class="btn-text">Next</span>
                                                 </button>
@@ -855,8 +675,8 @@
                 <div id="terms-php" class="hidden">
                     <h2 id="terms-php-top">Terms of Use</h2>
 
-                    <p>Effective June 1st, 2023</p>
-                    <p>Last Updated June 6th, 2023</p>
+                    <p>Effective June 1st, 2024</p>
+                    <p>Last Updated June 6th, 2024</p>
 
                     <p>Welcome to gogreenandsave.net!</p>
 
@@ -984,8 +804,8 @@
                 </div>
                 <div id="privacy-php" class="hidden">
                     <h2 id="privacy-php-top">Privacy Policy</h2>
-                    <p>Effective June 1st, 2023</p>
-                    <p>Last Updated June 6th, 2023</p>
+                    <p>Effective June 1st, 2024</p>
+                    <p>Last Updated June 6th, 2024</p>
                     <h1>Privacy Policy for For the Deal</h1>
 
                     <p>At gogreenandsave.net, accessible from https://gogreenandsave.net/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by gogreenandsave.net and how we use it.</p>
@@ -1109,16 +929,15 @@
         </div>
     </div>
 
-    <script data-cfasync="false" src="./cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    
     <script>
-        // Retrieve the sub1-sub2 parameter from the URL using JavaScript
         var urlParams = new URLSearchParams(window.location.search);
         var sub1Value = urlParams.get('sub1');
         var clickIdValue = urlParams.get('sub2');
-
-        // Set the sub1-sub2 parameter as the value of the hidden input field
     
     </script>
+    
     <script async>
         let startDate = new Date();
         let elapsedTime = 0;
@@ -1132,10 +951,7 @@
                     const endDate = new Date();
                     const spentTime = endDate.getTime() - this.startDateSinceLast.getTime();
                     this.startDateSinceLast = new Date();
-                    // elapsedTime contains the time spent on page in milliseconds
-                    $.get("./papi/persist.php?op=" + type + "&sub_type=" + sub_type + "&duration=" + spentTime, function(data) {
-                        /* do nothing */
-                    });
+                    
                 }
             }
         }
@@ -1187,10 +1003,7 @@
                     if (typeof callback == 'function')
                         callback();
                 });
-                // if (!messages.length) {
-                //     console.log("no messages; completed");
-                //     callback();
-                // }
+              
             }
 
             function toggleSubmitButtons(enable) {
@@ -1210,93 +1023,7 @@
                 $("#edit-customer-form input, #edit-customer-form select").removeAttr('disabled');
             })
 
-            $("#btn-save").click(function(e) {
-                e.preventDefault();
-                const form = $("#msform")[0];
-                const valid = form.checkValidity();
-                if (!valid) {
-                    return false;
-                }
-
-                /**
-                 * Validate form
-                 */
-                var zip = $("#zip");
-                var owner = $("#homeowner").val();
-                var first = $("#first").val();
-                var last = $("#last").val();
-                var address = $("#address").val();
-                var postal = zip.val();
-                var provider = $("#provider-select").val();
-                var utility_bill = $("#electric_bill").val();
-                var roof_shade = $("#roof_shade").val();
-                var email = $("#email").val();
-
-                const state = getState(postal);
-                if (!state || state == 'none') {
-                    displayError(zip, "unable to verify prefix");
-                    return false;
-                }
-
-                working.show();
-                ajaxVerify("./papi/validate.php?op=location&version=v4&postal=" + postal, function(response) {
-                    const details = response.body;
-                    serverCity = details.city;
-                    serverState = details.state;
-                    serverZip = details.zip;
-                    serverLong = details.longitude;
-                    serverLat = details.latitude;
-                    working.hide();
-                    if (details.savings) {
-                        exclusive_estimated_savings.text(details.savings.avg_lifetime_savings);
-                        exclusive_state.text(details.savings.state);
-                        exclusive_solar_system.text(details.savings.solar_system);
-                        exclusive_monthly_bill.text(details.savings.typical_monthly_bill);
-                    }
-
-                    verifyAddress(true, address, address, "", serverCity, serverState, "USA", true);
-                    /**
-                     * Transition back to preview screen
-                     */
-                    $("#preview-homeowner").html(owner);
-                    $("#preview-first-name").html(first);
-                    $("#preview-last-name").html(last);
-                    $("#preview-address").html(address);
-                    $("#preview-zip").html(postal);
-                    $("#postal_code").val(postal);
-                    $("#preview-utility-provider").html(provider);
-                    $("#preview-electric-bill").html('$' + utility_bill);
-                    $("#preview-roof-shade").html(roof_shade);
-                    $("#preview-email").html(email);
-                    $("#edit-customer-form").hide();
-                    $("#edit-customer-preview").show();
-                    window.scrollTo(0, 0);
-
-                }, function() {
-                    working.hide();
-                    displayError(zip, "unable to verify against DB");
-                    window._loq.push(["tag", 'Zip Err', true]);
-                });
-            });
-
-
-            // estimate savings content
-            const exclusive = $('#exclusive');
-            const exclusive_estimated_savings = $(".exclusive-estimate-savings");
-            const exclusive_state = $(".exclusive-state");
-            const exclusive_solar_system = $(".exclusive-solar-system");
-            const exclusive_monthly_bill = $(".exclusive-monthly-bill");
-            let ready_for_redirect = false;
-            window._loq = window._loq || [];
-            window._loq.push(["custom", {
-                timestamp
-            }]);
-            window._loq.push(["tag", 'Q1', true]);
-            window._loq.push(["tag", 'v4', true]);
-            if (a.length > 0) {
-                window._loq.push(["tag", 'Pub ' + a, true]);
-            }
-            window._loq.push(["tag", 'CF PK', true]);
+          
 
 
             let emailAjaxClient;
@@ -16253,13 +15980,7 @@
                
             }
 
-            function makeRequest(step) {
-                ajaxVerify("./papi/validate.php?op=next&step=" + step + "&version=v4", function(response) {
-                    // do nothing for now
-                }, function() {
-                    // do nothing for now
-                });
-            }
+          
 
             /**
              * Move Progress Bar
@@ -16406,28 +16127,7 @@
                 }
             }
 
-            /**
-             * Track step in 3rd party analytics
-             **/
-            function trackQuestion(step) {
-                let qstep = 'Q' + step;
-                dataLayer.push({
-                    'event': qstep
-                });
-                window._loq.push(["tag", qstep, true]);
-                gtag('event', 'page_view', {
-                    page_title: qstep,
-                    page_location: '/' + version + '/' + qstep,
-                    page_path: '/' + version + '/' + qstep,
-                    send_to: window.measurement_id
-                })
-                gtag('event', 'survey_step', {
-                    event_category: 'survey',
-                    event_label: qstep,
-                    label: qstep
-                })
-                makeRequest(qstep);
-            }
+           
 
             /**
              * Helper function determine if there's a next screen
@@ -16492,7 +16192,6 @@
                     }
                     current_fieldset.hide();
                     next_fieldset.fadeIn(function() {
-                        trackQuestion(next_step);
                         $(this).find('input').first().focus();
                         /**
                          * Consider removing this?
@@ -16535,127 +16234,62 @@
                 });
             }
 
-            /**
-             * Function for auto filling address, if user circumvents the drop down,
-             * we'll present options to make sure we attempt to verify the address.
-             **/
-            function displaySuggestions(predictions, status) {
-                if (status != google.maps.places.PlacesServiceStatus.OK) {
-                    predictions = [];
-                }
-
-                /**
-                 * Reduce USA only address
-                 */
-                predictions = predictions.filter((prediction) => {
-                    if (!prediction.terms) {
-                        return false;
-                    }
-                    const [street_number, route, locality, administrative_area_1, country] = prediction.terms.map(i => i.value);
-                    return (country == 'USA');
-                });
-
-                /**
-                 * If Google found any predictions, suggest them to the
-                 * user to correct
-                 **/
-                const full_address = $("#full_address").val();
-                if (predictions.length > 0) {
-                    window._loq.push(["tag", 'User Verify Address', true]);
-                    $("#street-address-verify").show();
-                    const results = $("#street_address_predictions");
-                    results.html(""); // clear results before writing new ones
-                    predictions.forEach((prediction) => {
-                        const [street_number, route, locality, administrative_area_1, country] = prediction.terms.map(i => i.value);
-
-                        const li = $("<button>")
-                            .addClass("address-autocomplete")
-                            .html(prediction.description)
-                            .attr('type', 'button')
-                            .attr('full', prediction.description)
-                            .attr('street_number', street_number)
-                            .attr('route', route)
-                            .attr('locality', locality)
-                            .attr('administrative_area_1', administrative_area_1)
-                            .attr('country', country)
-                            .attr('onClick', 'verifyAddressOnClick(this)');
-
-                        results.append(li);
-                    });
-                    results.append($("<button>")
-                        .addClass("address-autocomplete")
-                        .attr('type', 'button')
-                        .html("No, I typed the correct address")
-                        .attr('reject', 'true')
-                        .attr('full', full_address)
-                        .attr('street_number', full_address)
-                        .attr('route', "")
-                        .attr('locality', serverCity)
-                        .attr('administrative_area_1', serverState)
-                        .attr('country', "USA")
-                        .attr('onClick', 'verifyAddressOnClick(this)'));
-                }
-
-                // Fall back is to rely on the zip code database to submit
-                else {
-                    verifyAddress(true, full_address, full_address, "", serverCity, serverState, "USA");
-                }
-            }
+        
 
             /**
              * Reset the address verification
              **/
-            function resetAddressVerification() {
-                $('#street_number').val("");
-                $('#route').val("");
-                $('#locality').val("");
-                $('#administrative_area_level_1').val("");
-                $('#country').val("");
-                $("#postal_code").val("");
-                $("#street-address-verify").hide();
-            }
+            // function resetAddressVerification() {
+            //     $('#street_number').val("");
+            //     $('#route').val("");
+            //     $('#locality').val("");
+            //     $('#administrative_area_level_1').val("");
+            //     $('#country').val("");
+            //     $("#postal_code").val("");
+            //     $("#street-address-verify").hide();
+            // }
 
             /**
              * Verify Address (helper function)
              **/
-            function verifyAddress(reject, full, street_number, route, locality, administrative_area_1, country, skip) {
-                const skip_click = skip || false;
-                const zip = $("#zip").val();
-                $('#full_address').val(full);
-                $('#street_number').val(street_number);
-                $('#route').val(route);
-                $('#locality').val(locality);
-                $('#administrative_area_level_1').val(administrative_area_1);
-                $('#country').val(country);
-                $("#postal_code").val(zip);
-                $("#street-address-verify").hide();
-                $(".btn-next:visible, .quick-next:visible").removeAttr('disabled').attr("address-user-verified", true);
-                if (reject) {
-                    window._loq.push(["tag", 'Unverified Address', true]);
-                }
-                if (hasNext() && !skip_click) {
-                    setTimeout(function() {
-                        $(".btn-next:visible, .quick-next:visible").click();
-                    }, 200);
-                }
-            }
+            // function verifyAddress(reject, full, street_number, route, locality, administrative_area_1, country, skip) {
+            //     const skip_click = skip || false;
+            //     const zip = $("#zip").val();
+            //     $('#full_address').val(full);
+            //     $('#street_number').val(street_number);
+            //     $('#route').val(route);
+            //     $('#locality').val(locality);
+            //     $('#administrative_area_level_1').val(administrative_area_1);
+            //     $('#country').val(country);
+            //     $("#postal_code").val(zip);
+            //     $("#street-address-verify").hide();
+            //     $(".btn-next:visible, .quick-next:visible").removeAttr('disabled').attr("address-user-verified", true);
+            //     if (reject) {
+            //         window._loq.push(["tag", 'Unverified Address', true]);
+            //     }
+            //     if (hasNext() && !skip_click) {
+            //         setTimeout(function() {
+            //             $(".btn-next:visible, .quick-next:visible").click();
+            //         }, 200);
+            //     }
+            // }
 
 
-            /**
-             * Function to capture address provided by customer
-             * They're either rejecting or verifying the address.
-             **/
-            function verifyAddressOnClick(e) {
-                const item = $(e);
-                const reject = item.attr('reject');
-                const full = item.attr('full');
-                const street_number = item.attr('street_number');
-                const route = item.attr('route');
-                const locality = item.attr('locality');
-                const administrative_area_1 = item.attr('administrative_area_1');
-                const country = item.attr('country');
-                verifyAddress(reject, full, street_number, route, locality, administrative_area_1, country);
-            }
+            // /**
+            //  * Function to capture address provided by customer
+            //  * They're either rejecting or verifying the address.
+            //  **/
+            // function verifyAddressOnClick(e) {
+            //     const item = $(e);
+            //     const reject = item.attr('reject');
+            //     const full = item.attr('full');
+            //     const street_number = item.attr('street_number');
+            //     const route = item.attr('route');
+            //     const locality = item.attr('locality');
+            //     const administrative_area_1 = item.attr('administrative_area_1');
+            //     const country = item.attr('country');
+            //     verifyAddress(reject, full, street_number, route, locality, administrative_area_1, country);
+            // }
 
 
             /**
@@ -16664,43 +16298,14 @@
             let queries = 0;
             let running_verification = false;
 
-            function verifyRequest(path, timeout) {
-                if (!running_verification) {
-                    running_verification = true;
-                    setTimeout(function() {
-                        $.get(path, function(response) {
-                            running_verification = false;
-                            queries++;
-                            if (queries >= 50) {
-                                return false;
-                            }
-                            if (!response.body.click_id || !response.body.request_id) {
-                                verifyRequest(path, 3000);
-                            } else {
-                                $('#click_id').attr('value', response.body.click_id)
-                                $('#request_id').attr('value', response.body.request_id)
-                            }
-                        });
-                    }, timeout);
-                }
-            }
+          
 
             /**
              * Assess risk with email address
              **/
-            let iwVerified = false;
+    
 
-            function iwVerify(em, zip) {
-                if (!iwVerified) {
-                    ajaxVerify("./papi/validate.php?op=iw&version=v4&address=" + em + "&zip=" + zip,
-                        function() {
-                            window._loq.push(["tag", 'IW Queried', true]);
-                        },
-                        function() {
-                            window._loq.push(["tag", 'IW Error', true]);
-                        });
-                }
-            }
+          
 
             /**
              * Function for disabling submit button to avoid double
@@ -16747,7 +16352,7 @@
                 field.addClass("error");
                 const field_id = field.attr("id");
                 $("#" + field_id + "_error").show();
-                $.get("./papi/persist.php?op=form_error&sub_type=" + field_id + "&error=" + encodeURIComponent(error), function(data) {
+                $.get("/papi/persist.php?op=form_error&sub_type=" + field_id + "&error=" + encodeURIComponent(error), function(data) {
                     /* do nothing */
                 });
                 toggleNextButtons(true);
@@ -16760,17 +16365,7 @@
             dataLayer.push({
                 'event': 'Q1'
             });
-            gtag('event', 'page_view', {
-                page_title: 'Q1',
-                page_location: '/' + version + '/' + 'Q1',
-                page_path: '/' + version + '/' + 'Q1',
-                send_to: window.measurement_id
-            });
-            gtag('event', 'survey_step', {
-                event_category: 'survey',
-                event_label: 'Q1',
-                label: 'Q1'
-            });
+        
             const first_name = $("#first");
             const last_name = $("#last");
             const working = $("#work-in-progress");
@@ -16821,7 +16416,7 @@
             });
 
             let persistClickEngagement = () => {
-                $.get("./papi/persist.php?op=click", function(data) {
+                $.get("/papi/persist.php?op=click", function(data) {
                     /* do nothing */
                 });
                 persistClickEngagement = () => {
@@ -16883,67 +16478,49 @@
                 }
 
                 // Confirm complete address was provided by customer
-                const full_address = address.val();
-                if (address.is(":visible")) {
-                    if (address.is(":visible") && full_address.length < 3) {
-                        displayError(address, "less than 3 characters");
-                        return false;
-                    }
-                    if (!window.ADDRESS_VALIDATION_SKIP) {
-                        const street = $('#street_number').val().trim();
-                        const route = $('#route').val().trim();
-                        const locality = $('#locality').val().trim();
-                        const postal_code = $('#postal_code').val().trim();
-                        const country = $('#country').val().trim();
-                        const state = $("#administrative_area_level_1").val().trim();
-                        /**
-                         * In case someone has an autocomplete setup,
-                         * try to parse address with Google Once more
-                         * to format it.
-                         */
-                        // if (!addressUserVerified && full_address.length > 0 && (!street.length || !route.length || !locality.length || !postal_code.length || !country.length)) {
-                        //   $(".btn-next:visible, .quick-next:visible").attr('disabled', 'disabled');
-                        //   const service = new google.maps.places.AutocompleteService();
-                        //   service.getQueryPredictions({
-                        //     input: full_address,
-                        //     types: ["address"],
-                        //     location: new google.maps.LatLng(serverLat, serverLong),
-                        //     radius: 25,
-                        //     offset: 0,
-                        //     componentRestrictions: {country: 'us'}
-                        //   }, displaySuggestions);
-                        //   return false;
-                        // }
-
-                        if (!street.length && !route.length) {
-                            window._loq.push(["tag", 'No Street', true]);
-                        }
-                        if (!locality.length) {
-                            window._loq.push(["tag", 'No City', true]);
-                        }
-                        if (!postal_code.length) {
-                            window._loq.push(["tag", 'No Postal', true]);
-                        }
-                        if (!country.length) {
-                            window._loq.push(["tag", 'No Country', true]);
-                        }
-                        if (!state.length) {
-                            window._loq.push(["tag", 'No State', true]);
-                        }
-                        if (!street.length || !locality.length || !postal_code.length || !country.length || !state.length) {
-                            displayError(address, "could not parse address");
-                            return false;
-                        }
-                    } else {
-                        const customer_postal = zip.val();
-                        $('#street_number').val(full_address);
-                        $('#route').val("");
-                        $('#locality').val(serverCity);
-                        $('#administrative_area_level_1').val(serverState);
-                        $('#country').val("USA");
-                        $("#postal_code").val(customer_postal);
-                    }
-                }
+                // const full_address = address.val();
+                // if (address.is(":visible")) {
+                //     if (address.is(":visible") && full_address.length < 3) {
+                //         displayError(address, "less than 3 characters");
+                //         return false;
+                //     }
+                //     if (!window.ADDRESS_VALIDATION_SKIP) {
+                //         const street = $('#street_number').val().trim();
+                //         const route = $('#route').val().trim();
+                //         const locality = $('#locality').val().trim();
+                //         const postal_code = $('#postal_code').val().trim();
+                //         const country = $('#country').val().trim();
+                //         const state = $("#administrative_area_level_1").val().trim();
+                      
+                //         if (!street.length && !route.length) {
+                //             window._loq.push(["tag", 'No Street', true]);
+                //         }
+                //         if (!locality.length) {
+                //             window._loq.push(["tag", 'No City', true]);
+                //         }
+                //         if (!postal_code.length) {
+                //             window._loq.push(["tag", 'No Postal', true]);
+                //         }
+                //         if (!country.length) {
+                //             window._loq.push(["tag", 'No Country', true]);
+                //         }
+                //         if (!state.length) {
+                //             window._loq.push(["tag", 'No State', true]);
+                //         }
+                //         if (!street.length || !locality.length || !postal_code.length || !country.length || !state.length) {
+                //             displayError(address, "could not parse address");
+                //             return false;
+                //         }
+                //     } else {
+                //         const customer_postal = zip.val();
+                //         $('#street_number').val(full_address);
+                //         $('#route').val("");
+                //         $('#locality').val(serverCity);
+                //         $('#administrative_area_level_1').val(serverState);
+                //         $('#country').val("USA");
+                //         $("#postal_code").val(customer_postal);
+                //     }
+                // }
 
                 let timesSubmitted = 0;
 
@@ -17040,7 +16617,7 @@
                                 success();
                                 return;
                             }
-                            $.get("./papi/validate.php?op=posted&version=v4&id=" + conversion_id, function(res) {
+                            $.get("/papi/validate.php?op=posted&version=v4&id=" + conversion_id, function(res) {
                                     if (res.message === "posted") {
                                         if (typeof success == 'function') {
                                             measureSubmissionDuration.capture('complete');
@@ -17092,12 +16669,13 @@
                                         const last_name = $('#last').val()
                                         const phone_home = $('#phone').val()
                                         const street = $('#street_number').val()
+                                        const address = $('#address').val()
                                         const email = $('#email').val()
                                         const city = $('#locality').val()
                                         const state = $('#state').val()
                                         const zip = $("#zip").val()
                                         const ipadr = null
-                                        const data = `campid=C414B2A5CABC8B7B&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&street=${street}&email=${email}&city=${city}&state=${state}&zip=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=224&s2=1408`;
+                                        const data = `campid=C414B2A5CABC8B7B&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&street=${address}&email=${email}&city=${city}&state=${state}&zip=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=224&s2=1408`;
                                         console.log('tf data')
                                         var payout = 0;
                                         console.log(data)
@@ -17245,7 +16823,7 @@ window.location.href="/thank-you.php"
 
 
                     working.show();
-                    ajaxVerify("./papi/validate.php?op=location&version=v4&postal=" + postal, function(response) {
+                    ajaxVerify("/papi/validate.php?op=location&version=v4&postal=" + postal, function(response) {
 
                         let details = response.body;
                         details = JSON.parse(details)
@@ -17288,14 +16866,13 @@ window.location.href="/thank-you.php"
                     }
 
                     working.show();
-                    const path = "./papi/validate.php?op=email&version=v4&address=" + value + "&zip=" + zip.val();
+                    const path = "/papi/validate.php?op=email&version=v4&address=" + value + "&zip=" + zip.val();
                     ajaxVerify(path,
                         function(data) {
                             working.hide();
                             window._loq.push(['custom', {
                                 'email': value
                             }])
-                            iwVerify(value, zip.val());
                             go_next();
                         },
                         function(data) {
@@ -17316,7 +16893,7 @@ window.location.href="/thank-you.php"
                         return false;
                     }
                     working.show();
-                    const path = "./papi/validate.php?op=phone&number=" + lookupValue + "&version=v4";
+                    const path = "/papi/validate.php?op=phone&number=" + lookupValue + "&version=v4";
                     ajaxVerify(path,
                         function() {
                             working.hide();
@@ -17355,7 +16932,7 @@ window.location.href="/thank-you.php"
                 $("#" + field_name + "_error").hide();
                 $(".btn-next, .quick-next").removeAttr('disabled').removeAttr('address-user-verified');
                 if (field_name == 'full_address') {
-                    resetAddressVerification();
+                 //   resetAddressVerification();
                 }
             });
 
@@ -17407,7 +16984,7 @@ window.location.href="/thank-you.php"
                         if (err) {
                             err.style.display = 'block';
                         }
-                        $.get("./papi/persist.php?op=error&sub_type=" + input.id + "&error=failed+html5+rule", function(data) {
+                        $.get("/papi/persist.php?op=error&sub_type=" + input.id + "&error=failed+html5+rule", function(data) {
                             /* do nothing */
                         });
                         toggleSubmitButtons(true);
@@ -17434,7 +17011,7 @@ window.location.href="/thank-you.php"
             const spentTime = endDate.getTime() - startDate.getTime();
             elapsedTime += spentTime;
             // elapsedTime contains the time spent on page in milliseconds
-            $.get("./papi/persist.php?op=" + bounceType + "&duration=" + elapsedTime, function(data) {
+            $.get("/papi/persist.php?op=" + bounceType + "&duration=" + elapsedTime, function(data) {
                 /* do nothing */
             });
         };
@@ -17464,13 +17041,13 @@ window.location.href="/thank-you.php"
                     $('.form-steps, .form-steps:hidden').each(function() {
                         tags.push($(this).data('tag'));
                     });
-                    $.get("./papi/persist.php?op=pageview&sub_type=form&tags=" + encodeURIComponent(tags.join(',')), function(data) {
+                    $.get("/papi/persist.php?op=pageview&sub_type=form&tags=" + encodeURIComponent(tags.join(',')), function(data) {
                         /* do nothing */
                     });
                 }, 1500);
 
                 function scrollEgngaged(event) {
-                    $.get("./papi/persist.php?op=scrolled", function(data) {
+                    $.get("/papi/persist.php?op=scrolled", function(data) {
                         /* do nothing */
                     });
                     document.removeEventListener('scroll', scrollEgngaged, true);
@@ -17548,16 +17125,7 @@ window.location.href="/thank-you.php"
 
 
 
-    <script>
-        function aaa() {
-            gtag('event', 'conversion', {
-                'send_to': 'AW-11110660362/YsMVCOiL0ZEYEIry_LEp'
-            });
-
-        }
-
-        document.querySelector("#q2-next").addEventListener("click", aaa)
-    </script>
+ 
 
     <script>
         function openPopup(url) {
