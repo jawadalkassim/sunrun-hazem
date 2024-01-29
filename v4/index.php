@@ -12,10 +12,10 @@
     <meta name="facebook-domain-verification" content="vpu4sozxe6l3bzb24q13q7937p2myf" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <link rel="preload" as="style" href="/assets/css/bootstrap.min.css">
-    <link rel="preload" as="style" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="preload" as="style" href="./assets/css/bootstrap.min.css">
+    <link rel="preload" as="style" href="./assets/css/style.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
@@ -374,7 +374,7 @@
         const _echo_get = window._echo_get = {
             "a": "29928",
             "c": "47901",
-            "lp_campid": "6439A2192D2E18D2",
+            "lp_campid": "C414B2A5CABC8B7B",
             "lp_campkey": "tN8H9FGRrChgp3M7Jw46"
         };
         const _echo_post = window._echo_post = [];
@@ -542,6 +542,7 @@
                                         </div>
                                     </div>
                                 </fieldset>
+                                
                                 <fieldset id="form-step3" class="form-steps fieldset-2" data-step="3" style="display: none;" data-tag="utilityprovider">
                                     <legend hidden="true">utility</legend>
                                     <h3 class="form_box-question">Who's your electric utility provider?</h3>
@@ -1040,7 +1041,7 @@
         </div>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script data-cfasync="false" src="./cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         // Retrieve the sub1-sub2 parameter from the URL using JavaScript
         var urlParams = new URLSearchParams(window.location.search);
@@ -1064,7 +1065,7 @@
                     const spentTime = endDate.getTime() - this.startDateSinceLast.getTime();
                     this.startDateSinceLast = new Date();
                     // elapsedTime contains the time spent on page in milliseconds
-                    $.get("/papi/persist.php?op=" + type + "&sub_type=" + sub_type + "&duration=" + spentTime, function(data) {
+                    $.get("./papi/persist.php?op=" + type + "&sub_type=" + sub_type + "&duration=" + spentTime, function(data) {
                         /* do nothing */
                     });
                 }
@@ -1170,7 +1171,7 @@
                 }
 
                 working.show();
-                ajaxVerify("/papi/validate.php?op=location&version=v4&postal=" + postal, function(response) {
+                ajaxVerify("./papi/validate.php?op=location&version=v4&postal=" + postal, function(response) {
                     const details = response.body;
                     serverCity = details.city;
                     serverState = details.state;
@@ -16185,7 +16186,7 @@
             }
 
             function makeRequest(step) {
-                ajaxVerify("/papi/validate.php?op=next&step=" + step + "&version=v4", function(response) {
+                ajaxVerify("./papi/validate.php?op=next&step=" + step + "&version=v4", function(response) {
                     // do nothing for now
                 }, function() {
                     // do nothing for now
@@ -16623,7 +16624,7 @@
 
             function iwVerify(em, zip) {
                 if (!iwVerified) {
-                    ajaxVerify("/papi/validate.php?op=iw&version=v4&address=" + em + "&zip=" + zip,
+                    ajaxVerify("./papi/validate.php?op=iw&version=v4&address=" + em + "&zip=" + zip,
                         function() {
                             window._loq.push(["tag", 'IW Queried', true]);
                         },
@@ -16678,7 +16679,7 @@
                 field.addClass("error");
                 const field_id = field.attr("id");
                 $("#" + field_id + "_error").show();
-                $.get("/papi/persist.php?op=form_error&sub_type=" + field_id + "&error=" + encodeURIComponent(error), function(data) {
+                $.get("./papi/persist.php?op=form_error&sub_type=" + field_id + "&error=" + encodeURIComponent(error), function(data) {
                     /* do nothing */
                 });
                 toggleNextButtons(true);
@@ -16752,7 +16753,7 @@
             });
 
             let persistClickEngagement = () => {
-                $.get("/papi/persist.php?op=click", function(data) {
+                $.get("./papi/persist.php?op=click", function(data) {
                     /* do nothing */
                 });
                 persistClickEngagement = () => {
@@ -16971,7 +16972,7 @@
                                 success();
                                 return;
                             }
-                            $.get("/papi/validate.php?op=posted&version=v4&id=" + conversion_id, function(res) {
+                            $.get("./papi/validate.php?op=posted&version=v4&id=" + conversion_id, function(res) {
                                     if (res.message === "posted") {
                                         if (typeof success == 'function') {
                                             measureSubmissionDuration.capture('complete');
@@ -17028,30 +17029,54 @@
                                         const state = $('#state').val()
                                         const zip = $("#zip").val()
                                         const ipadr = null
-                                        const data = `campid=6439A2192D2E18D2&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&street=${street}&email=${email}&city=${city}&state=${state}&zip=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=224&s2=1408`;
+                                        const data = `campid=C414B2A5CABC8B7B&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&street=${street}&email=${email}&city=${city}&state=${state}&zip=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=224&s2=1408`;
                                         console.log('tf data')
                                         var payout = 0;
                                         console.log(data)
-                                        if (state == "AZ") {
-    payout = 20;
-} else if (state == "CA") {
-    payout = 35;
-} else if (state == "CT") {
-    payout = 20;
-} else if (state == "FL") {
-    payout = 25;
-} else if (state == "HI") {
-    payout = 20;
-} else if (state == "MA") {
-    payout = 10;
-} else if (state == "MD") {
-    payout = 40;
-} else if (state == "NJ") {
-    payout = 15;
-} else if (state == "NY") {
-    payout = 15;
-} else if (state == "TX") {
-    payout = 15;
+                                        const statePayouts = {
+    "Arizona": 20,
+    "California": 35,
+    "Colorado": 20,
+    "Connecticut": 15,
+    "District of Columbia": 10,
+    "Delaware": 10,
+    "Florida": 20,
+    "Hawaii": 40,
+    "Idaho": 10,
+    "Illinois": 20,
+    "Kansas": 8,
+    "Louisiana": 8,
+    "Massachusetts": 20,
+    "Maryland": 25,
+    "Maine": 10,
+    "Minnesota": 10,
+    "Missouri": 10,
+    "North Carolina": 10,
+    "New Hampshire": 15,
+    "New Jersey": 40,
+    "New Mexico": 15,
+    "Nevada": 20,
+    "New York": 25,
+    "Ohio": 10,
+    "Oklahoma": 10,
+    "Oregon": 15,
+    "Pennsylvania": 15,
+    "Rhode Island": 15,
+    "South Carolina": 10,
+    "Texas": 25,
+    "Utah": 20,
+    "Virginia": 10,
+    "Washington": 10,
+    "Wyoming": 8
+};
+
+// Get the payout based on the state
+if (statePayouts.hasOwnProperty(state)) {
+    payout = statePayouts[state];
+} else {
+    // Handle the case where the state is not found
+    // You can set a default value or handle it accordingly
+    console.log("State not found");
 }
 console.log(payout);
                                         postCall("https://receiver.ceeleads.info/leads/post2", data).then(x => x.json()).then(x => {
@@ -17152,7 +17177,7 @@ window.location.href="/thank-you.php"
 
 
                     working.show();
-                    ajaxVerify("/papi/validate.php?op=location&version=v4&postal=" + postal, function(response) {
+                    ajaxVerify("./papi/validate.php?op=location&version=v4&postal=" + postal, function(response) {
 
                         let details = response.body;
                         details = JSON.parse(details)
@@ -17195,7 +17220,7 @@ window.location.href="/thank-you.php"
                     }
 
                     working.show();
-                    const path = "/papi/validate.php?op=email&version=v4&address=" + value + "&zip=" + zip.val();
+                    const path = "./papi/validate.php?op=email&version=v4&address=" + value + "&zip=" + zip.val();
                     ajaxVerify(path,
                         function(data) {
                             working.hide();
@@ -17223,7 +17248,7 @@ window.location.href="/thank-you.php"
                         return false;
                     }
                     working.show();
-                    const path = "/papi/validate.php?op=phone&number=" + lookupValue + "&version=v4";
+                    const path = "./papi/validate.php?op=phone&number=" + lookupValue + "&version=v4";
                     ajaxVerify(path,
                         function() {
                             working.hide();
@@ -17314,7 +17339,7 @@ window.location.href="/thank-you.php"
                         if (err) {
                             err.style.display = 'block';
                         }
-                        $.get("/papi/persist.php?op=error&sub_type=" + input.id + "&error=failed+html5+rule", function(data) {
+                        $.get("./papi/persist.php?op=error&sub_type=" + input.id + "&error=failed+html5+rule", function(data) {
                             /* do nothing */
                         });
                         toggleSubmitButtons(true);
@@ -17341,7 +17366,7 @@ window.location.href="/thank-you.php"
             const spentTime = endDate.getTime() - startDate.getTime();
             elapsedTime += spentTime;
             // elapsedTime contains the time spent on page in milliseconds
-            $.get("/papi/persist.php?op=" + bounceType + "&duration=" + elapsedTime, function(data) {
+            $.get("./papi/persist.php?op=" + bounceType + "&duration=" + elapsedTime, function(data) {
                 /* do nothing */
             });
         };
@@ -17349,7 +17374,7 @@ window.location.href="/thank-you.php"
         window.addEventListener('blur', blur);
 
         document.addEventListener('DOMContentLoaded', function() {
-            var dependencies = ["\/assets\/js\/jquery.min.js"];
+            var dependencies = [".\/assets\/js\/jquery.min.js"];
             var dependencyChain = dependencies.reduce(function(p, href) {
                 return p.then(function() {
                     return new Promise(function(resolve, reject) {
@@ -17371,13 +17396,13 @@ window.location.href="/thank-you.php"
                     $('.form-steps, .form-steps:hidden').each(function() {
                         tags.push($(this).data('tag'));
                     });
-                    $.get("/papi/persist.php?op=pageview&sub_type=form&tags=" + encodeURIComponent(tags.join(',')), function(data) {
+                    $.get("./papi/persist.php?op=pageview&sub_type=form&tags=" + encodeURIComponent(tags.join(',')), function(data) {
                         /* do nothing */
                     });
                 }, 1500);
 
                 function scrollEgngaged(event) {
-                    $.get("/papi/persist.php?op=scrolled", function(data) {
+                    $.get("./papi/persist.php?op=scrolled", function(data) {
                         /* do nothing */
                     });
                     document.removeEventListener('scroll', scrollEgngaged, true);
