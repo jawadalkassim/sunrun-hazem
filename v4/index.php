@@ -12,10 +12,10 @@
     <meta name="facebook-domain-verification" content="vpu4sozxe6l3bzb24q13q7937p2myf" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <link rel="preload" as="style" href="./assets/css/bootstrap.min.css">
-    <link rel="preload" as="style" href="./assets/css/style.min.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <link rel="preload" as="style" href="/assets/css/bootstrap.min.css">
+    <link rel="preload" as="style" href="/assets/css/style.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
