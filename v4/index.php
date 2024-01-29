@@ -486,7 +486,7 @@
                                 <input type="hidden" id="interested_in_solar_hot_water" name="interested_in_solar_hot_water" value="no">
                                 <input type="hidden" id="interested_in_solar_pool_heating" name="interested_in_solar_pool_heating" value="no">
                                 <input type="hidden" id="street_number" name="street_number" value="">
-
+                                <input type="hidden" id="state" name="state" value="">
                                 <input type="hidden" name="sub1" id="sub1Input">
                                 <input type="hidden" id="route" name="street" value="">
                                 <input type="hidden" id="administrative_area_level_1" name="state" value="">
@@ -713,7 +713,9 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                <fieldset id="form-step10" class="form-steps fieldset-9" data-step="10" style="display: none;" data-tag="state">
+
+      
+<!-- <fieldset id="form-step10" class="form-steps fieldset-9" data-step="10" style="display: none;" data-tag="state">
     <legend hidden="true">State</legend>
     <h3 class="form_box-question">Select State</h3>
     <div class="form-group" id="state_dropdown">
@@ -770,13 +772,7 @@
             <option value="Wisconsin">Wisconsin</option>
             <option value="Wyoming">Wyoming</option>
         </select>
-        <div id="address_error" class="form-error-message">Please provide where you'd like the panels installed.</div>
-    </div>
-    <div class="form-group" id="street-address-verify" style="display: none;">
-        <label>Did you mean to type? (Tap or click the answer that matches best)</label>
-        <div id="street_address_predictions">
-        </div>
-    </div>
+      
     <div class="row">
         <div class="col colback"><a class="btn btn-link btn-back">Back</a></div>
         <div class="col">
@@ -785,9 +781,8 @@
             </div>
         </div>
     </div>
-</fieldset>
-
-                                <fieldset id="form-step11" class="form-steps fieldset-10" data-step="11" style="display: none;" data-tag="phone">
+</fieldset> -->
+                                <fieldset id="form-step10" class="form-steps fieldset-9" data-step="10" style="display: none;" data-tag="phone">
                                     <legend hidden="true">Phone</legend>
                                     <p class="form_box-desc">What phone number can we reach you at?</p>
                                     <div class="form-group">
