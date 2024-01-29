@@ -331,7 +331,7 @@
                 state = 'Vermont';
             } else if (zipcode >= 22000 && zipcode <= 24699) {
                 st = 'VA';
-                state = 'Virgina';
+                state = 'Virginia';
             } else if (zipcode >= 20000 && zipcode <= 20599) {
                 st = 'DC';
                 state = 'Washington DC';
@@ -485,7 +485,6 @@
                                 <input type="hidden" id="interested_in_solar_electric" name="interested_in_solar_electric" value="yes">
                                 <input type="hidden" id="interested_in_solar_hot_water" name="interested_in_solar_hot_water" value="no">
                                 <input type="hidden" id="interested_in_solar_pool_heating" name="interested_in_solar_pool_heating" value="no">
-                                <input type="hidden" id="state" name="state" value="">
                                 <input type="hidden" id="street_number" name="street_number" value="">
 
                                 <input type="hidden" name="sub1" id="sub1Input">
@@ -714,7 +713,76 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                <fieldset id="form-step10" class="form-steps fieldset-9" data-step="10" style="display: none;" data-tag="phone">
+                                <fieldset id="form-step10" class="form-steps fieldset-9" data-step="10" style="display: none;" data-tag="state">
+    <legend hidden="true">State</legend>
+    <h3 class="form_box-question">Select State</h3>
+    <div class="form-group" id="state_dropdown">
+        <select id="state" class="form-control" name="state" required>
+            <option value="" disabled selected>Select your state</option>
+            <option value="Alabama">Alabama</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arizona">Arizona</option>
+            <option value="Arkansas">Arkansas</option>
+            <option value="California">California</option>
+            <option value="Colorado">Colorado</option>
+            <option value="Connecticut">Connecticut</option>
+            <option value="Delaware">Delaware</option>
+            <option value="Florida">Florida</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Idaho">Idaho</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Kansas">Kansas</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Louisiana">Louisiana</option>
+            <option value="Maine">Maine</option>
+            <option value="Maryland">Maryland</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Minnesota">Minnesota</option>
+            <option value="Mississippi">Mississippi</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Montana">Montana</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Nevada">Nevada</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New Mexico">New Mexico</option>
+            <option value="New York">New York</option>
+            <option value="North Carolina">North Carolina</option>
+            <option value="North Dakota">North Dakota</option>
+            <option value="Ohio">Ohio</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Oregon">Oregon</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Rhode Island">Rhode Island</option>
+            <option value="South Carolina">South Carolina</option>
+            <option value="South Dakota">South Dakota</option>
+            <option value="Tennessee">Tennessee</option>
+            <option value="Texas">Texas</option>
+            <option value="Utah">Utah</option>
+            <option value="Vermont">Vermont</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Washington">Washington</option>
+            <option value="West Virginia">West Virginia</option>
+            <option value="Wisconsin">Wisconsin</option>
+            <option value="Wyoming">Wyoming</option>
+        </select>
+    </div>
+   
+    <div class="row">
+        <div class="col colback"><a class="btn btn-link btn-back">Back</a></div>
+        <div class="col">
+            <div class="form-btns ml-auto text-right">
+                <button id="q10-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Next</span></button>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+                                <fieldset id="form-step11" class="form-steps fieldset-10" data-step="11" style="display: none;" data-tag="phone">
                                     <legend hidden="true">Phone</legend>
                                     <p class="form_box-desc">What phone number can we reach you at?</p>
                                     <div class="form-group">
@@ -17033,6 +17101,7 @@
                                         console.log('tf data')
                                         var payout = 0;
                                         console.log(data)
+                                        console.log(state)
                                         const statePayouts = {
     "Arizona": 20,
     "California": 35,
