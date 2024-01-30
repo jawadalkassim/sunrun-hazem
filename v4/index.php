@@ -1019,10 +1019,10 @@ window._loq =[]
 
             function toggleSubmitButtons(enable) {
                 if (enable) {
-                    $("#q10-next").show();
+                    $("#q11-next").show();
                     $("#q10-next-loading").hide();
                 } else {
-                    $("#q10-next").hide();
+                    $("#q11-next").hide();
                     $("#q10-next-loading").show();
                 }
             }
