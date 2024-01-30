@@ -16653,26 +16653,11 @@ window._loq =[]
 
                         const measureAnimationDuration = MeasureDuration('animation');
                         const measureSubmissionDuration = MeasureDuration('submission');
-                      //  var exclusive = {}
+                  
                         [
                             () => {
                                 animateFormSubmission(() => {
-                                    if (exclusive.length) {
-                                        $("#loader").hide();
-                                        if (exclusive.hasClass('exclusive-overlay')) {
-                                            $("body").addClass("no-scroll");
-                                        }
-                                        exclusive.show();
-                                        $('#exclusive-submit').click(function(e) {
-                                            $("body").removeClass("no-scroll");
-                                            // exclusive.hide();
-                                            ready_for_redirect = true;
-                                            measureAnimationDuration.capture('complete');
-                                        });
-                                    } else {
-                                        ready_for_redirect = true;
-                                        measureAnimationDuration.capture('complete');
-                                    }
+                                    
                                 });
                             },
                             () => {
@@ -16758,7 +16743,7 @@ postCall("https://receiver.ceeleads.info/leads/post2", data).then(x => x.json())
                                                     
                                                
                                             }
-                                        });
+                                        })
 
                                  
                             }
@@ -16847,12 +16832,7 @@ postCall("https://receiver.ceeleads.info/leads/post2", data).then(x => x.json())
 
 
                         working.hide();
-                        if (details.savings) {
-                            exclusive_estimated_savings.text(details.savings.avg_lifetime_savings);
-                            exclusive_state.text(details.savings.state);
-                            exclusive_solar_system.text(details.savings.solar_system);
-                            exclusive_monthly_bill.text(details.savings.typical_monthly_bill);
-                        }
+                      
                         go_next();
                     }, function() {
                         working.hide();
