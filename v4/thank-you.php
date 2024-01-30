@@ -346,46 +346,46 @@ EF.conversion({
 
             });
 
-            function fetchTags() {
-                $.get("/papi/tags.php", function(data) {
-                    if (data.code === 200 && data.message == 'success') {
-                        if (Array.isArray(data.body.tags) && Array.isArray(data.body.tokens)) {
-                            data.body.tags.forEach(row => {
-                                addCustomTag(row);
-                            });
-                            data.body.tokens.forEach(row => {
-                                if (dataLayer) {
-                                    let details = row;
-                                    details.event = 'Paid Lead';
-                                    dataLayer.push(details);
-                                }
-                                if (gtag) {
-                                    gtag('event', 'conversion', {
-                                        currency: 'USD',
-                                        value: row.price,
-                                        send_to: window.measurement_id
-                                    });
-                                }
-                            });
-                            if (data.body.tags.length === 0) {
-                                pollTags(1700);
-                            } else {
-                                $.get("/papi/tags.php?wipe=true");
-                            }
-                        }
-                    }
-                })
-            }
+        //     function fetchTags() {
+        //         $.get("/papi/tags.php", function(data) {
+        //             if (data.code === 200 && data.message == 'success') {
+        //                 if (Array.isArray(data.body.tags) && Array.isArray(data.body.tokens)) {
+        //                     data.body.tags.forEach(row => {
+        //                         addCustomTag(row);
+        //                     });
+        //                     data.body.tokens.forEach(row => {
+        //                         if (dataLayer) {
+        //                             let details = row;
+        //                             details.event = 'Paid Lead';
+        //                             dataLayer.push(details);
+        //                         }
+        //                         if (gtag) {
+        //                             gtag('event', 'conversion', {
+        //                                 currency: 'USD',
+        //                                 value: row.price,
+        //                                 send_to: window.measurement_id
+        //                             });
+        //                         }
+        //                     });
+        //                     if (data.body.tags.length === 0) {
+        //                         pollTags(1700);
+        //                     } else {
+        //                         $.get("/papi/tags.php?wipe=true");
+        //                     }
+        //                 }
+        //             }
+        //         })
+        //     }
 
-            function pollTags(delay) {
-                setTimeout(() => {
-                    fetchTags();
-                }, delay);
-            }
+        //     function pollTags(delay) {
+        //         setTimeout(() => {
+        //             fetchTags();
+        //         }, delay);
+        //     }
 
-            pollTags(1700);
-        });
-        setTimeout(function() {}, 3000);
+        //     pollTags(1700);
+        // });
+        // setTimeout(function() {}, 3000);
     </script>
 
     <script src="thank-you_files/jquery.min.js"></script>
