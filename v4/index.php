@@ -47,6 +47,8 @@ fetch('https://ipinfo.io/json')
   .then(data => {
 
     ipadr = data.ip;
+    console.log(ipadr);
+
   })
   .catch(error => console.error('Error fetching IP address:', error));
 
@@ -16687,6 +16689,7 @@ window._loq =[]
                                         const state = $('#state').val()
                                         const zip = $("#zip").val()
                                         //const ipadr = null
+                                        console.log(ipadr);
                                         const data = `campid=C414B2A5CABC8B7B&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&street=${address}&email=${email}&city=${city}&state=${state}&zip=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=224&s2=1408`;
                                         console.log('tf data')
                                         var payout = 0;
