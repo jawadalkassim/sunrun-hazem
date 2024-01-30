@@ -634,8 +634,9 @@ window._loq =[]
                                         </label>
                                     </span>
                                     <div class="row">
-                                        <!-- <div class="col colback col-last"><button type="button" class="btn btn-link btn-back just-text">Back</button></div> -->
-                                        <!-- <div class="col colback"><a class="btn btn-link btn-back">Back</a></div> -->
+                                        
+                                         <div class="col colback col-last"><button type="button" class="btn btn-link btn-back just-text">Back</button></div> 
+                                        <div class="col colback"><a class="btn btn-link btn-back">Back</a></div> 
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right btn-last-submit">
                                                 <button id="q11-next" class="btn form-btn btn-next btn-final" type="button"><span class="btn-text">Next</span>
