@@ -395,302 +395,302 @@ EF.conversion({
 
 <?php
 
-    $sourceId = $_POST['sub1'];
-    ini_set('max_execution_time', 100);
+    // $sourceId = $_POST['sub1'];
+    // ini_set('max_execution_time', 100);
 
-    // API endpoint URL
-    $urlPing = 'https://leads-inst338-client.phonexa.com/ping/';
+    // // API endpoint URL
+    // $urlPing = 'https://leads-inst338-client.phonexa.com/ping/';
 
-    $trustedForm = $_POST['xxTrustedFormCertUrl'];
-    $provider = $_POST['utility_provider'];
-    $ownHome = $_POST['property_ownership'];
-    $address = $_POST['full_address'];
-    $zip = $_POST['zip_code'];
-    $city = $_POST['city'];
-    $state = $_POST['state'];
-    $monthlyBill = $_POST['electric_bill'];
-    $roofShade = $_POST['roof_shade'];
-    $ip_address = $_SERVER['REMOTE_ADDR'];
-    $clickId = $_POST['click_id'];
-    $firstName = $_POST['first_name'];
-    $lastName = $_POST['last_name'];
-    $email = $_POST['email_address'];
-    $phone = $_POST['phone_home'];
+    // $trustedForm = $_POST['xxTrustedFormCertUrl'];
+    // $provider = $_POST['utility_provider'];
+    // $ownHome = $_POST['property_ownership'];
+    // $address = $_POST['full_address'];
+    // $zip = $_POST['zip_code'];
+    // $city = $_POST['city'];
+    // $state = $_POST['state'];
+    // $monthlyBill = $_POST['electric_bill'];
+    // $roofShade = $_POST['roof_shade'];
+    // $ip_address = $_SERVER['REMOTE_ADDR'];
+    // $clickId = $_POST['click_id'];
+    // $firstName = $_POST['first_name'];
+    // $lastName = $_POST['last_name'];
+    // $email = $_POST['email_address'];
+    // $phone = $_POST['phone_home'];
 
-    if($ownHome === 'Own'){
-        $ownHome = 'OWN';
-    } else{
-        $ownHome = 'RENT';
-    }
+    // if($ownHome === 'Own'){
+    //     $ownHome = 'OWN';
+    // } else{
+    //     $ownHome = 'RENT';
+    // }
 
-    if($roofShade === 'No Shade'){
-        $roofShade = 'NO_SHADE';
-    }elseif ($roofShade === 'A Little Shade') {
-        $roofShade = 'SOME_SHADE';
-    }elseif ($roofShade === 'A Lot of Shade') {
-        $roofShade = 'FULL_SHADE';
-    }elseif ($roofShade === 'Uncertain') {
-        $roofShade = 'NOT_SURE';
-    };
+    // if($roofShade === 'No Shade'){
+    //     $roofShade = 'NO_SHADE';
+    // }elseif ($roofShade === 'A Little Shade') {
+    //     $roofShade = 'SOME_SHADE';
+    // }elseif ($roofShade === 'A Lot of Shade') {
+    //     $roofShade = 'FULL_SHADE';
+    // }elseif ($roofShade === 'Uncertain') {
+    //     $roofShade = 'NOT_SURE';
+    // };
 
-    $apiPayload = array(
-        'email' => $email,
-        'phone' => $phone,
-        'firstName' => $firstName,
-        'lastName' => $lastName,
-        'postalCode' => $zip,
-        'address1' => $address,
-        'tags' => [
-            "Solar",
-            "lead",
-            "Spanish"
-        ]
-        );
-    $customsFields = array(
-        'h0yght2ZerZXMAdJ1N5T' => $ip_address,
-        '8ObcareCtSE3ABLgyxSY' => $ownHome,
-        'HThFMFdFDJbGVPjdpjWe' => $roofShade,
-        'F5ifICjtmsE50Nej5Kxf' => 'UNSURE',
-        'jFg3nQGXqF034joeNjI0' => $monthlyBill,
-        'SbYk1vFzluyep7WAqk5p' => $trustedForm,
-        '0JoNfKFeCPF1G5NRAqkn' => $provider,
+    // $apiPayload = array(
+    //     'email' => $email,
+    //     'phone' => $phone,
+    //     'firstName' => $firstName,
+    //     'lastName' => $lastName,
+    //     'postalCode' => $zip,
+    //     'address1' => $address,
+    //     'tags' => [
+    //         "Solar",
+    //         "lead",
+    //         "Spanish"
+    //     ]
+    //     );
+    // $customsFields = array(
+    //     'h0yght2ZerZXMAdJ1N5T' => $ip_address,
+    //     '8ObcareCtSE3ABLgyxSY' => $ownHome,
+    //     'HThFMFdFDJbGVPjdpjWe' => $roofShade,
+    //     'F5ifICjtmsE50Nej5Kxf' => 'UNSURE',
+    //     'jFg3nQGXqF034joeNjI0' => $monthlyBill,
+    //     'SbYk1vFzluyep7WAqk5p' => $trustedForm,
+    //     '0JoNfKFeCPF1G5NRAqkn' => $provider,
 
-    );
+    // );
     
-    $apiPayload['customField'] = $customsFields;
-    $apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6IldUWENtV1U3bFpZYjlKWHBwRkowIiwiY29tcGFueV9pZCI6Im5tQ1MwYUwzYlhKZ2pWem95UkttIiwidmVyc2lvbiI6MSwiaWF0IjoxNjg5ODczNDgwMjc5LCJzdWIiOiJ1c2VyX2lkIn0.k0ijGcMSPDd6qC9L2UzDhfcgfzLu0ZuLcFX6hpvLj2w";
+    // $apiPayload['customField'] = $customsFields;
+    // $apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6IldUWENtV1U3bFpZYjlKWHBwRkowIiwiY29tcGFueV9pZCI6Im5tQ1MwYUwzYlhKZ2pWem95UkttIiwidmVyc2lvbiI6MSwiaWF0IjoxNjg5ODczNDgwMjc5LCJzdWIiOiJ1c2VyX2lkIn0.k0ijGcMSPDd6qC9L2UzDhfcgfzLu0ZuLcFX6hpvLj2w";
     
-    $curlGHL = curl_init();
+    // $curlGHL = curl_init();
 
-    curl_setopt($curlGHL, CURLOPT_URL, "https://rest.gohighlevel.com/v1/contacts/");
-    curl_setopt($curlGHL, CURLOPT_POST, true);
-    curl_setopt($curlGHL, CURLOPT_POSTFIELDS, json_encode($apiPayload));
-    curl_setopt($curlGHL, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($curlGHL, CURLOPT_HTTPHEADER, array(
-            "Authorization: Bearer " . $apiKey,
-            "Content-Type: application/json",
-	));
+    // curl_setopt($curlGHL, CURLOPT_URL, "https://rest.gohighlevel.com/v1/contacts/");
+    // curl_setopt($curlGHL, CURLOPT_POST, true);
+    // curl_setopt($curlGHL, CURLOPT_POSTFIELDS, json_encode($apiPayload));
+    // curl_setopt($curlGHL, CURLOPT_RETURNTRANSFER, true);
+    // curl_setopt($curlGHL, CURLOPT_HTTPHEADER, array(
+    //         "Authorization: Bearer " . $apiKey,
+    //         "Content-Type: application/json",
+	// ));
 
-    curl_setopt_array($curlGHL, [
-		CURLOPT_ENCODING       => "",
-		CURLOPT_MAXREDIRS      => 10,
-		CURLOPT_TIMEOUT        => 80,
-		CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1
-	]);
+    // curl_setopt_array($curlGHL, [
+	// 	CURLOPT_ENCODING       => "",
+	// 	CURLOPT_MAXREDIRS      => 10,
+	// 	CURLOPT_TIMEOUT        => 80,
+	// 	CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1
+	// ]);
     
-    $responseGHL = curl_exec($curlGHL);
-    curl_close($curlGHL);
+    // $responseGHL = curl_exec($curlGHL);
+    // curl_close($curlGHL);
 
-    $dataDirect = array(
-        'campid' => '6439A2192D2E18D2',
-        'first_name' => $firstName,
-        'last_name' => $lastName,
-        'phone_home' => $phone,
-        'street' => $address,
-        'city' => $city,
-        'state' => $state,
-        'zip' => $zip,
-        'email' => $email,
-        'property_ownership' => $ownHome,
-        'ip_address' => $ip_address,
-        'roof_shade' => $roofShade,
-        'electricUtilityProviderText' => $provider,
-        'electric_bill' => $monthlyBill,
-        'xxTrustedFormCertUrl' => $trustedForm,
-        'solar_electric' => 'TRUE',
-    );
+    // $dataDirect = array(
+    //     'campid' => '6439A2192D2E18D2',
+    //     'first_name' => $firstName,
+    //     'last_name' => $lastName,
+    //     'phone_home' => $phone,
+    //     'street' => $address,
+    //     'city' => $city,
+    //     'state' => $state,
+    //     'zip' => $zip,
+    //     'email' => $email,
+    //     'property_ownership' => $ownHome,
+    //     'ip_address' => $ip_address,
+    //     'roof_shade' => $roofShade,
+    //     'electricUtilityProviderText' => $provider,
+    //     'electric_bill' => $monthlyBill,
+    //     'xxTrustedFormCertUrl' => $trustedForm,
+    //     'solar_electric' => 'TRUE',
+    // );
 
-    $dataDirectEncoded = json_encode($dataDirect);
+    // $dataDirectEncoded = json_encode($dataDirect);
 
-    $curlDirect = curl_init();
+    // $curlDirect = curl_init();
 
-    curl_setopt($curlDirect, CURLOPT_URL, "http://receiver.ceeleads.info/leads/post2");
-    curl_setopt($curlDirect, CURLOPT_POST, true);
-    curl_setopt($curlDirect, CURLOPT_POSTFIELDS, $dataDirectEncoded);
-    curl_setopt($curlDirect, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($curlDirect, CURLOPT_HTTPHEADER, array(
-        "Content-Type: application/json",
-	));
+    // curl_setopt($curlDirect, CURLOPT_URL, "http://receiver.ceeleads.info/leads/post2");
+    // curl_setopt($curlDirect, CURLOPT_POST, true);
+    // curl_setopt($curlDirect, CURLOPT_POSTFIELDS, $dataDirectEncoded);
+    // curl_setopt($curlDirect, CURLOPT_RETURNTRANSFER, true);
+    // curl_setopt($curlDirect, CURLOPT_HTTPHEADER, array(
+    //     "Content-Type: application/json",
+	// ));
 
-    curl_setopt_array($curlDirect, [
-		CURLOPT_ENCODING       => "",
-		CURLOPT_MAXREDIRS      => 10,
-		CURLOPT_TIMEOUT        => 80,
-		CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1
-	]);
+    // curl_setopt_array($curlDirect, [
+	// 	CURLOPT_ENCODING       => "",
+	// 	CURLOPT_MAXREDIRS      => 10,
+	// 	CURLOPT_TIMEOUT        => 80,
+	// 	CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1
+	// ]);
     
-    $responseDirect = curl_exec($curlDirect);
-    echo $responseDirect;
-    curl_close($curlDirect);
+    // $responseDirect = curl_exec($curlDirect);
+    // echo $responseDirect;
+    // curl_close($curlDirect);
 
-    // Data to send to the API
-    $data = array(
-        'apiId' => 'E154A88B87B442FAA2C4AF4B19827E0F',
-        'apiPassword' => 'f60ef34b',
-        'productId' => '177',
-        'trustedForm' => $trustedForm,
-        'jornayaLeadId' => '',
-        'tcpa' => 'YES',
-        'tcpaLanguage' => "I agree to Terms, Privacy, and consent to solar/home servicers to send marketing prerecorded messages and autodialed calls/texts to my phone number above even if it's on any do not call list. Consent is not a condition of purchase. You can opt-out at any time (see Terms). Message/data rates may apply.",
-        'webSiteUrl' => 'https://gogreenandsave.co/',
-        'urlConsent' => 'https://gogreenandsave.co/',
-        'address' => $address,
-        'zip' => $zip,
-        'city' => '',
-        'state' => '',
-        'ownHome' => $ownHome,
-        'bestCallTime' => 'Any Time',
-        'utilityProvider' => $provider,
-        'monthlyBill' => $monthlyBill,
-        'propertyType' => 'OTHER',
-        'roofType' => 'UNSURE_OTHER',
-        'roofShade' => $roofShade,
-        'creditRating' => 'FAIR',
-        'purchaseTimeFrame' => 'OTHER',
-        'userIp' => $ip_address,
-        'clickId' => $clickId,
-        'source' => $sourceId,
-        'projectType' => 'NEW',
-        'solarSystemType' => 'ELECTRICITY',
-    );
+    // // Data to send to the API
+    // $data = array(
+    //     'apiId' => 'E154A88B87B442FAA2C4AF4B19827E0F',
+    //     'apiPassword' => 'f60ef34b',
+    //     'productId' => '177',
+    //     'trustedForm' => $trustedForm,
+    //     'jornayaLeadId' => '',
+    //     'tcpa' => 'YES',
+    //     'tcpaLanguage' => "I agree to Terms, Privacy, and consent to solar/home servicers to send marketing prerecorded messages and autodialed calls/texts to my phone number above even if it's on any do not call list. Consent is not a condition of purchase. You can opt-out at any time (see Terms). Message/data rates may apply.",
+    //     'webSiteUrl' => 'https://gogreenandsave.co/',
+    //     'urlConsent' => 'https://gogreenandsave.co/',
+    //     'address' => $address,
+    //     'zip' => $zip,
+    //     'city' => '',
+    //     'state' => '',
+    //     'ownHome' => $ownHome,
+    //     'bestCallTime' => 'Any Time',
+    //     'utilityProvider' => $provider,
+    //     'monthlyBill' => $monthlyBill,
+    //     'propertyType' => 'OTHER',
+    //     'roofType' => 'UNSURE_OTHER',
+    //     'roofShade' => $roofShade,
+    //     'creditRating' => 'FAIR',
+    //     'purchaseTimeFrame' => 'OTHER',
+    //     'userIp' => $ip_address,
+    //     'clickId' => $clickId,
+    //     'source' => $sourceId,
+    //     'projectType' => 'NEW',
+    //     'solarSystemType' => 'ELECTRICITY',
+    // );
 
-    $dataJson = json_encode($data);
+    // $dataJson = json_encode($data);
 
-    // Initialize cURL
-    $curl = curl_init();
+    // // Initialize cURL
+    // $curl = curl_init();
 
-    // Set cURL options
-    curl_setopt($curl, CURLOPT_URL, $urlPing);
-    curl_setopt($curl, CURLOPT_POST, true);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $dataJson);
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-		"Content-Type: application/json"
-	));
+    // // Set cURL options
+    // curl_setopt($curl, CURLOPT_URL, $urlPing);
+    // curl_setopt($curl, CURLOPT_POST, true);
+    // curl_setopt($curl, CURLOPT_POSTFIELDS, $dataJson);
+    // curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    // curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+	// 	"Content-Type: application/json"
+	// ));
 
-    curl_setopt_array($curl, [
-		CURLOPT_ENCODING       => "",
-		CURLOPT_MAXREDIRS      => 10,
-		CURLOPT_TIMEOUT        => 80,
-		CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1
-	]);
+    // curl_setopt_array($curl, [
+	// 	CURLOPT_ENCODING       => "",
+	// 	CURLOPT_MAXREDIRS      => 10,
+	// 	CURLOPT_TIMEOUT        => 80,
+	// 	CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1
+	// ]);
 
-    // Send the request
-    $response = curl_exec($curl);
-    // Close cURL
-    curl_close($curl);
+    // // Send the request
+    // $response = curl_exec($curl);
+    // // Close cURL
+    // curl_close($curl);
 
-    $jsonPromise = json_decode($response);
-    $jsonPromiseDirect = json_decode($responseDirect);
-    $promise = $jsonPromise->promise;
-    $amount = $jsonPromiseDirect->price;
+    // $jsonPromise = json_decode($response);
+    // $jsonPromiseDirect = json_decode($responseDirect);
+    // $promise = $jsonPromise->promise;
+    // $amount = $jsonPromiseDirect->price;
 
-    // Data to send to the API
-    $dataEver = array(
-        'nid' => 1006,
-        'affid' => $sourceId,
-        'oid' => 1987,
-        'amount' => $amount
-    );
+    // // Data to send to the API
+    // $dataEver = array(
+    //     'nid' => 1006,
+    //     'affid' => $sourceId,
+    //     'oid' => 1987,
+    //     'amount' => $amount
+    // );
 
-    $dataJsonEver = json_encode($dataEver);
+    // $dataJsonEver = json_encode($dataEver);
 
-    // Your base URL
-    $urlEver = 'https://www.ecomfyl.com/';
+    // // Your base URL
+    // $urlEver = 'https://www.ecomfyl.com/';
 
-    // Build the query string
-    $queryString = http_build_query($params);
+    // // Build the query string
+    // $queryString = http_build_query($params);
 
-    // Combine the base URL and the query string
-    $urlWithParams = $baseUrl . '?' . $queryString;
+    // // Combine the base URL and the query string
+    // $urlWithParams = $baseUrl . '?' . $queryString;
 
-    // Initialize cURL
-    $curlEver = curl_init();
+    // // Initialize cURL
+    // $curlEver = curl_init();
 
-    // Set cURL options
-    curl_setopt($curlEver, CURLOPT_URL, $urlEver);
-    curl_setopt($curlEver, CURLOPT_POST, true);
-    curl_setopt($curlEver, CURLOPT_POSTFIELDS, $dataJsonEver);
-    curl_setopt($curlEver, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($curlEver, CURLOPT_HTTPHEADER, array(
-		"Content-Type: application/json"
-	));
+    // // Set cURL options
+    // curl_setopt($curlEver, CURLOPT_URL, $urlEver);
+    // curl_setopt($curlEver, CURLOPT_POST, true);
+    // curl_setopt($curlEver, CURLOPT_POSTFIELDS, $dataJsonEver);
+    // curl_setopt($curlEver, CURLOPT_RETURNTRANSFER, true);
+    // curl_setopt($curlEver, CURLOPT_HTTPHEADER, array(
+	// 	"Content-Type: application/json"
+	// ));
 
-    curl_setopt_array($curlEver, [
-		CURLOPT_ENCODING       => "",
-		CURLOPT_MAXREDIRS      => 10,
-		CURLOPT_TIMEOUT        => 80,
-		CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1
-	]);
+    // curl_setopt_array($curlEver, [
+	// 	CURLOPT_ENCODING       => "",
+	// 	CURLOPT_MAXREDIRS      => 10,
+	// 	CURLOPT_TIMEOUT        => 80,
+	// 	CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1
+	// ]);
 
-    // Send the request
-    $responseEver = curl_exec($curlEver);
-    // Close cURL
-    curl_close($curlEver);
+    // // Send the request
+    // $responseEver = curl_exec($curlEver);
+    // // Close cURL
+    // curl_close($curlEver);
 
-    $urlPost = 'https://leads-inst338-client.phonexa.com/post/';
+    // $urlPost = 'https://leads-inst338-client.phonexa.com/post/';
     
-    // Data to send to the API
-    $dataPost = array(
-        'promise' => $promise,
-        'apiId' => 'E154A88B87B442FAA2C4AF4B19827E0F',
-        'apiPassword' => 'f60ef34b',
-        'productId' => '177',
-        'trustedForm' => $trustedForm,
-        'jornayaLeadId' => '',
-        'tcpa' => $ownHome,
-        'tcpaLanguage' => "I agree to Terms, Privacy, and consent to solar/home servicers to send marketing prerecorded messages and autodialed calls/texts to my phone number above even if it's on any do not call list. Consent is not a condition of purchase. You can opt-out at any time (see Terms). Message/data rates may apply.",
-        'webSiteUrl' => 'https://gogreenandsave.net/',
-        'urlConsent' => 'https://gogreenandsave.net/',
-        'firstName' => $firstName,
-        'lastName' => $lastName,
-        'email' => $email,
-        'homePhone' => '',
-        'mobilePhone' => $phone,
-        'address' => $address,
-        'zip' => $zip,
-        'city' => '',
-        'state' => '',
-        'ownHome' => $ownHome,
-        'bestCallTime' => 'Any Time',
-        'utilityProvider' => $provider,
-        'monthlyBill' => $monthlyBill,
-        'propertyType' => 'OTHER',
-        'roofType' => 'UNSURE_OTHER',
-        'roofShade' => $roofShade,
-        'creditRating' => 'FAIR',
-        'purchaseTimeFrame' => 'OTHER',
-        'userIp' => $ip_address,
-        'clickId' => $clickId,
-        'source' => $sourceId,
-        'projectType' => 'NEW',
-        'solarSystemType' => 'ELECTRICITY',
-    );
+    // // Data to send to the API
+    // $dataPost = array(
+    //     'promise' => $promise,
+    //     'apiId' => 'E154A88B87B442FAA2C4AF4B19827E0F',
+    //     'apiPassword' => 'f60ef34b',
+    //     'productId' => '177',
+    //     'trustedForm' => $trustedForm,
+    //     'jornayaLeadId' => '',
+    //     'tcpa' => $ownHome,
+    //     'tcpaLanguage' => "I agree to Terms, Privacy, and consent to solar/home servicers to send marketing prerecorded messages and autodialed calls/texts to my phone number above even if it's on any do not call list. Consent is not a condition of purchase. You can opt-out at any time (see Terms). Message/data rates may apply.",
+    //     'webSiteUrl' => 'https://gogreenandsave.net/',
+    //     'urlConsent' => 'https://gogreenandsave.net/',
+    //     'firstName' => $firstName,
+    //     'lastName' => $lastName,
+    //     'email' => $email,
+    //     'homePhone' => '',
+    //     'mobilePhone' => $phone,
+    //     'address' => $address,
+    //     'zip' => $zip,
+    //     'city' => '',
+    //     'state' => '',
+    //     'ownHome' => $ownHome,
+    //     'bestCallTime' => 'Any Time',
+    //     'utilityProvider' => $provider,
+    //     'monthlyBill' => $monthlyBill,
+    //     'propertyType' => 'OTHER',
+    //     'roofType' => 'UNSURE_OTHER',
+    //     'roofShade' => $roofShade,
+    //     'creditRating' => 'FAIR',
+    //     'purchaseTimeFrame' => 'OTHER',
+    //     'userIp' => $ip_address,
+    //     'clickId' => $clickId,
+    //     'source' => $sourceId,
+    //     'projectType' => 'NEW',
+    //     'solarSystemType' => 'ELECTRICITY',
+    // );
 
-    $dataJsonPost = json_encode($dataPost);
+    // $dataJsonPost = json_encode($dataPost);
 
-    // Initialize cURL
-    $curlPost = curl_init();
+    // // Initialize cURL
+    // $curlPost = curl_init();
 
-    // Set cURL options
-    curl_setopt($curlPost, CURLOPT_URL, $urlPost);
-    curl_setopt($curlPost, CURLOPT_POST, true);
-    curl_setopt($curlPost, CURLOPT_POSTFIELDS, $dataJsonPost);
-    curl_setopt($curlPost, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($curlPost, CURLOPT_HTTPHEADER, array(
-        "Content-Type: application/json"
-    ));
+    // // Set cURL options
+    // curl_setopt($curlPost, CURLOPT_URL, $urlPost);
+    // curl_setopt($curlPost, CURLOPT_POST, true);
+    // curl_setopt($curlPost, CURLOPT_POSTFIELDS, $dataJsonPost);
+    // curl_setopt($curlPost, CURLOPT_RETURNTRANSFER, true);
+    // curl_setopt($curlPost, CURLOPT_HTTPHEADER, array(
+    //     "Content-Type: application/json"
+    // ));
 
-    curl_setopt_array($curlPost, [
-        CURLOPT_ENCODING       => "",
-        CURLOPT_MAXREDIRS      => 10,
-        CURLOPT_TIMEOUT        => 60,
-        CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1
-    ]);
+    // curl_setopt_array($curlPost, [
+    //     CURLOPT_ENCODING       => "",
+    //     CURLOPT_MAXREDIRS      => 10,
+    //     CURLOPT_TIMEOUT        => 60,
+    //     CURLOPT_HTTP_VERSION   => CURL_HTTP_VERSION_1_1
+    // ]);
 
-    // Send the request
-    $responsePost = curl_exec($curlPost);
-    // Close cURL
-    curl_close($curlPost);
+    // // Send the request
+    // $responsePost = curl_exec($curlPost);
+    // // Close cURL
+    // curl_close($curlPost);
 
 ?>
