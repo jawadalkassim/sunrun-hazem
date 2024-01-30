@@ -673,7 +673,7 @@ window._loq =[]
                     <div class="footer-menu">
                         <div id="footer" class="form-group">
                             <p id="tcpa_label"> 
-                                Copyright&copy; 2023&nbsp;gogreenandsave.net&nbsp;All Rights Reserved &nbsp;<a href="privacy.php" target="_new">Privacy policy</a> || <a href="terms.php" target="_new">Terms and Conditions</a> || <a href="ccpa.php" target="_new">CCPA</a> || <a href="contact_us.php" target="_new">Contact Us</a>
+                                Copyright&copy; 2024&nbsp;gogreenandsave.net&nbsp;All Rights Reserved &nbsp;<a href="privacy.php" target="_new">Privacy policy</a> || <a href="terms.php" target="_new">Terms and Conditions</a> || <a href="ccpa.php" target="_new">CCPA</a> || <a href="contact_us.php" target="_new">Contact Us</a>
                             </p>
                             <style>
                                 footer {
