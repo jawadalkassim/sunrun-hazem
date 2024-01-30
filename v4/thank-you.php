@@ -24,15 +24,7 @@
         var num = urlParams.get('num');
     
     </script>
-<script type="text/javascript"
-    src="https://www.jerlnk.com/scripts/sdk/everflow.js"></script>
 
-<script type="text/javascript">
-EF.conversion({
-    offer_id: 2286,
-    amount: num,
-});
-</script>
     
     <script>
         window.price = 0.00;
