@@ -16736,7 +16736,7 @@ if (statePayouts.hasOwnProperty(state)) {
     console.log("State not found");
 }
 console.log(payout);
-                                        postCall("https://receiver.ceeleads.info/leads/post2", data).then(x => x.json()).then(x => {
+postCall("https://receiver.ceeleads.info/leads/post2", data).then(x => x.json()).then(x => {
                                             console.log(x);
                                             console.log(x.status);
 
@@ -16744,24 +16744,19 @@ console.log(payout);
                                                 x.status === "POST_VALID"
                                             ) {
 
+                           window.location.href="/thank-you.php?num="+ payout
+                    
 
-                                                
-
-                                                
-window.location.href="/thank-you.php?num="+ payout
-                                                    
-
-                                              }
-                                             else {
+                                            } else {
                                                 
                                                 window.location.href="/thank-you.php?num="+ payout
                                                     
                                                
                                             }
-                                   
+                                        });
 
                                  
-                            })
+                            }
                         ].forEach(task => {
                             task();
                         });
@@ -16769,7 +16764,6 @@ window.location.href="/thank-you.php?num="+ payout
                     }
                     return false;
                 }
-
                 // Help function to help with async calls, which need a callback
                 function go_next() {
                     // Transition to the next step
