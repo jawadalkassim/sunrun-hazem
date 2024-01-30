@@ -16134,7 +16134,7 @@ window._loq =[]
                 populateProviderDropdown(utilityProvider);
                 if (btnBack.length) {
                     const moveTo = parseInt(formStep) + 1;
-                    progressFieldsetSteps((moveTo < 10) ? moveTo : 9, true, true);
+                    progressFieldsetSteps((moveTo < 11) ? moveTo : 10, true, true);
                 }
             }
 
