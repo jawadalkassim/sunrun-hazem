@@ -18,43 +18,25 @@
     <script async="" defer="defer" src="thank-you_files/gtm.js"></script>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11110660362"></script>
+
     <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-11110660362');
+        var urlParams = new URLSearchParams(window.location.search);
+        var num = urlParams.get('num');
+    
     </script>
+<script type="text/javascript"
+    src="https://www.jerlnk.com/scripts/sdk/everflow.js"></script>
 
-    <!-- Event snippet for solar - poweredbysolar.energy conversion page -->
-
-    <!-- Event snippet for Requested Quote Completed conversion page -->
-    <script>
-        gtag('event', 'conversion', {
-            'send_to': 'AW-11110660362/jDNSCIqcmpIYEIry_LEp'
-        });
-    </script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XX1DLGG5VV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-XX1DLGG5VV');
-    </script>
-
-
+<script type="text/javascript">
+EF.conversion({
+    offer_id: 2286,
+    amount: num,
+});
+</script>
+    
     <script>
         window.price = 0.00;
-        window.s1 = '';
+        window.s1 = ''; 
         window.s2 = '890adeb51fd44bcaa0281664ab17ecd8';
         window.s3 = '93';
         window.s4 = '';

@@ -19,7 +19,23 @@
 
 
  
+    <script type="text/javascript"
+    src="https://www.jerlnk.com/scripts/sdk/everflow.js"></script>
 
+<script type="text/javascript">
+EF.click({
+    offer_id: EF.urlParameter('oid'),
+    affiliate_id: EF.urlParameter('affid'),
+    sub1: EF.urlParameter('sub1'),
+    sub2: EF.urlParameter('sub2'),
+    sub3: EF.urlParameter('sub3'),
+    sub4: EF.urlParameter('sub4'),
+    sub5: EF.urlParameter('sub5'),
+    uid: EF.urlParameter('uid'),
+    source_id: EF.urlParameter('source_id'),
+    transaction_id: EF.urlParameter('_ef_transaction_id'),
+});
+</script>
 
 
 
@@ -931,12 +947,7 @@ window._loq =[]
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     
-    <script>
-        var urlParams = new URLSearchParams(window.location.search);
-        var sub1Value = urlParams.get('sub1');
-        var clickIdValue = urlParams.get('sub2');
-    
-    </script>
+   
     
     <script async>
         let startDate = new Date();
@@ -16734,23 +16745,23 @@ console.log(payout);
                                             ) {
 
 
-                                                fetch(`https://www.ecomfyl.com/?nid=1006&transaction_id=${clickIdValue}&amount=${payout}`).then(
-
-                                                    (res) => {
-window.location.href="/thank-you.php"
-                                                    }
-
-                                                );
-                                            } else {
                                                 
-                                                window.location.href="/thank-you.php"
+
+                                                
+window.location.href="/thank-you.php?num="+ payout
+                                                    
+
+                                              }  ;
+                                             else {
+                                                
+                                                window.location.href="/thank-you.php?num="+ payout
                                                     
                                                
                                             }
-                                        });
+                                   
 
                                  
-                            }
+                            })
                         ].forEach(task => {
                             task();
                         });
