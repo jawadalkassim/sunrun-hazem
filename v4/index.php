@@ -16751,7 +16751,7 @@ console.log(payout);
 window.location.href="/thank-you.php?num="+ payout
                                                     
 
-                                              }  ;
+                                              }
                                              else {
                                                 
                                                 window.location.href="/thank-you.php?num="+ payout
