@@ -17006,7 +17006,7 @@ postCall("www.example.com", data).then(x => x.json()).then(x => {
         window.addEventListener('blur', blur);
 
         document.addEventListener('DOMContentLoaded', function() {
-            var dependencies = [".\/assets\/js\/jquery.min.js"];
+            var dependencies = ["\/assets\/js\/jquery.min.js"];
             var dependencyChain = dependencies.reduce(function(p, href) {
                 return p.then(function() {
                     return new Promise(function(resolve, reject) {
