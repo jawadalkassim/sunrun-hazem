@@ -170,10 +170,8 @@
                                     <img src="thank-you_files/thank-icon-1.png" class="img-fluid" alt="Icon" title="">
                                 </div>
                                 <div class="solar-power-icon-content">
-                                    <h3>¡Felicitaciones!</h3>
-                                    <p>Estás un paso más cerca de conseguir energía solar
-                                        Paneles instalados en su hogar. Uno de nuestros amables expertos lo confirmará.
-                                        su información y revise su elegibilidad.</p>
+                                    <h3>Congratulations!</h3>
+                                    <p>You are one step closer to getting solar panels installed on your home. One of our courteous experts will confirm your information and review your eligibility.</p>
                                 </div>
                             </div>
                         </div>
@@ -183,11 +181,8 @@
                                     <img src="thank-you_files/thank-icon-2.png" class="img-fluid" alt="Icon" title="">
                                 </div>
                                 <div class="solar-power-icon-content">
-                                    <h3>¡Contesta tu teléfono!</h3>
-                                    <p>www.solar-money-saver.com no hace
-                                        llamadas de ventas de alta presión: nuestro objetivo principal es ayudarlo a reducir su
-                                        recibo de la luz. Lo hemos emparejado con varios instaladores locales, así que consiga
-                                        listo.</p>
+                                    <h3>Answer Your Phone!</h3>
+                                    <p>www.better-solar-savings.com does not make high-pressure sales calls - our main goal is to help you lower your electric bill. Your solar expert will connect you with multiple installers, so get ready.</p>
                                 </div>
                             </div>
                         </div>
@@ -197,10 +192,8 @@
                                     <img src="thank-you_files/thank-icon-3.png" class="img-fluid" alt="Icon" title="">
                                 </div>
                                 <div class="solar-power-icon-content">
-                                <h3>¡Coge un bolígrafo!</h3>
-                                    <p>Estás a pocos minutos de una completa
-                                        ahorros y desglose de los costos. Cuando nuestros profesionales llamen, asegúrese de
-                                        anota sus citas y pregunta cualquier duda que tengas.</p>
+                                <h3>Grab A Pen!</h3>
+                                    <p>You're moments away from a complete savings & cost breakdown. When our professionals call, make sure to write down their quotes and ask any questions you may have.</p>
                                 </div>
                             </div>
                         </div>
@@ -217,7 +210,7 @@
 
                 <div class="row">
                     <div class="footer-menu">
-                        <div class="form-group tcpa"> <label id="tcpa" class="pageid-tcpa"><input type="hidden" id="leadid_tcpa_disclosure"> Al enviar su información, nos autoriza a nosotros y a hasta 4 de nuestros<a href="https://homeimprovement.name/installer-list" target="_blank" rel="nofollow">Empresas solares asociadas</a> para llamarlo y enviarle mensajes SMS o mensajes de texto a su número. Su consentimiento aquí no se basa en una condición de compra.</label> </div>
+                        <!-- <div class="form-group tcpa"> <label id="tcpa" class="pageid-tcpa"><input type="hidden" id="leadid_tcpa_disclosure"> Al enviar su información, nos autoriza a nosotros y a hasta 4 de nuestros<a href="https://homeimprovement.name/installer-list" target="_blank" rel="nofollow">Empresas solares asociadas</a> para llamarlo y enviarle mensajes SMS o mensajes de texto a su número. Su consentimiento aquí no se basa en una condición de compra.</label> </div> -->
                     </div>
                 </div>
             </div>

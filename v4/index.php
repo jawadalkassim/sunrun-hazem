@@ -16726,15 +16726,14 @@ console.log(payout);
 // Odey this is Just for testing because I removed the api for the buyer i will redirect the lead to thank you page 
 // this will be removed when we add the real api below
 //****
-window.location.href="/thank-you.php?num="+ payout
+//window.location.href="/thank-you.php?num="+ payout
 // ****
-postCall("www.example.com", data).then(x => x.json()).then(x => {
+postCall("https://hooks.zapier.com/hooks/catch/12345456/3qz4o6z/", data).then(x => x.json()).then(x => {
                                             console.log(x);
                                             console.log(x.status);
 
-
                                             if (
-                                                x.status === "POST_VALID"
+                                                x.status === "success"
                                             ) {
 
                            window.location.href="/thank-you.php?num="+ payout
