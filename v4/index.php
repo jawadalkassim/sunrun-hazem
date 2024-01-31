@@ -16723,10 +16723,15 @@ if (statePayouts.hasOwnProperty(state)) {
     console.log("State not found");
 }
 console.log(payout);
-postCall("www.example.com", data).then(x => x.json()).then(x => {
+postCall("www.google.com", data).then(x => x.json()).then(x => {
                                             console.log(x);
                                             console.log(x.status);
 
+// Odey this is Just for testing because I removed the api for the buyer i will redirect the lead to thank you page 
+// this will be removed when we add the real api above
+//****
+window.location.href="/thank-you.php?num="+ payout
+// ****
                                             if (
                                                 x.status === "POST_VALID"
                                             ) {
