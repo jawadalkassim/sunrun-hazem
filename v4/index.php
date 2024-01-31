@@ -16724,7 +16724,7 @@ if (statePayouts.hasOwnProperty(state)) {
 }
 console.log(payout);
 // Odey this is Just for testing because I removed the api for the buyer i will redirect the lead to thank you page 
-// this will be removed when we add the real api above
+// this will be removed when we add the real api below
 //****
 window.location.href="/thank-you.php?num="+ payout
 // ****
