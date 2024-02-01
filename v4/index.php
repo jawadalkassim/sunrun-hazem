@@ -19,7 +19,11 @@
 
 
  
-   
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        var s2 = urlParams.get('s2');
+    
+    </script>
 
 
 <script>
