@@ -572,7 +572,7 @@ window._loq =[]
                                 </fieldset>
                                 <fieldset id="form-step9" class="form-steps fieldset-9" data-step="9" style="display: none;" data-tag="address">
                                     <legend hidden="true">City</legend>
-                                    <h3 class="form_box-question">Which city do you live in?</h3>
+                                    <h3 class="form_box-question">¿En qué ciudad vives?</h3>
                                     <div class="form-group" id="street_address">
                                         <input id="city" class="form-control" type="text" name="city" placeholder="Ciudad" value="" required>
                                         <div id="address_error" class="form-error-message">Please, type where would you like your solar panels to be installed.</div>
