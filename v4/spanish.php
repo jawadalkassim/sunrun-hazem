@@ -927,7 +927,7 @@ window._loq =[]
                 </div>
                 <div id="contact_us-php" class="hidden">
                     <h2 id="contact_us-php-top">Contact Us</h2>
-                    <p>If you have any questions regarding or you need any support regarding our policies, please, do not hesitate in contact us through the following email: luis@forthedeal.com <br>or at our mailing address: 33 sw 2nd ave suite 802 <br>
+                    <p>If you have any questions regarding or you need any support regarding our policies, please, do not hesitate in contact us through the following email:  <br>or at our mailing address: 33 sw 2nd ave suite 802 <br>
                     We handle emails during our normal business hours. Please include your full name and zip code on your inquiry.
                     </p>
                     <style>
