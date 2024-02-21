@@ -21,8 +21,7 @@
  
     <script>
         var urlParams = new URLSearchParams(window.location.search);
-        var s2 = urlParams.get('s2');
-        var s3 = urlParams.get('s3');
+        var s1 = urlParams.get('s1');
 
     
     </script>
@@ -16683,7 +16682,7 @@ window._loq =[]
                                         const jornaya = $("#leadid_token").val()
                                         //const ipadr = null
                                       //  console.log(ipadr);
-                                        const data = `campid=DC7DA05969C2DB02&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&street=${address}&email=${email}&city=${city}&state=${state}&zip=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=${s2}&s3=${s3}&universal_leadid=${jornaya}`;
+                                        const data = `campid=DC7DA05969C2DB02&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&street=${address}&email=${email}&city=${city}&state=${state}&zip=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=${s1}&universal_leadid=${jornaya}`;
                                         console.log('tf data')
                                         var payout = 0;
                                         console.log(data)
