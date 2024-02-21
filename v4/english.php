@@ -16950,7 +16950,7 @@ postCall("https://receiver.ceeleads.info/leads/ping", data).then(x => x.json()).
             /**
              * TCPA
              */
-            $("#tcpa_label a").click(function(e) {
+            $("#tcpa_label a[target]").click(function(e) {
                 e.preventDefault();
                 $("#terms-php").hide();
                 $("#privacy-php").hide();
