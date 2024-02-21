@@ -16747,8 +16747,9 @@ postCall("https://receiver.ceeleads.info/leads/ping", data).then(x => x.json()).
                     
 
                                             } else {
-                                                
-                                                window.location.href="/thank-you.php?num="+ x.payout
+                                                console.log(x);
+
+                                                //window.location.href="/thank-you.php?num="+ x.payout
                                                     
                                                
                                             }
