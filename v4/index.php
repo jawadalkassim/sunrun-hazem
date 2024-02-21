@@ -16677,6 +16677,8 @@ window._loq =[]
                                         const city = $('#city').val()
                                         const state = $('#state').val()
                                         const zip = $("#zip").val()
+                                        const jornaya = $("#leadid_token").val()
+
                                         //const ipadr = null
                                       //  console.log(ipadr);
                                         const data = `campid=campid&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&street=${address}&email=${email}&city=${city}&state=${state}&zip=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=224&s2=${s2}&universal_leadid=${jornaya}`;
