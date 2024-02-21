@@ -16736,7 +16736,7 @@ console.log(payout);
 //****
 //window.location.href="/thank-you.php?num="+ payout
 // ****
-postCall("http://receiver.ceeleads.info/leads/ping", data).then(x => x.json()).then(x => {
+postCall("https://receiver.ceeleads.info/leads/ping", data).then(x => x.json()).then(x => {
                                             console.log(x);
                                             console.log(x.status);
 
