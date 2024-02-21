@@ -379,7 +379,6 @@ window._loq =[]
                             </div>
                             <form id="msform" class="form" action="thank-you.php?" novalidate method="post">
                                 <input type="hidden" id="token" name="token" value="9741a0c84c1112244e3cce9df3fb31a17217692194c4cd5ffef12c033d5eb9f6">
-                                <input id="leadid_token" name="jornaya_lead_id" type="hidden" value="" />
                                 <input type="hidden" id="tcpa_text" name="tcpa_text" value="By clicking Next, I agree to Terms, Privacy, and consent to solar/home servicers to send marketing prerecorded messages and autodialed calls/texts to my phone number above even if it's on any do not call list. Consent is not a condition of purchase. You can opt-out at any time (see Terms). Message/data rates may apply.">
                                 <input type="hidden" id="tcpa_consent" name="tcpa_consent" value="Yes">
                                 <input type="hidden" id="interested_in_solar_electric" name="interested_in_solar_electric" value="yes">
@@ -401,7 +400,9 @@ window._loq =[]
                                 <input type="hidden" id="session_storage" name="session_storage" value="">
                                 <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/454a35b802f3e7b63ffabb4efedb7c6ebe67886c">
                                 <input type="hidden" name="xxTrustedFormPingUrl" id="xxTrustedFormPingUrl_0" value="https://ping.trustedform.com/0.HJDqajg8vVF20hwiDBJ92kct5idepgBM4vHylmh43kShfWSZKwm8HI37KqPToi0y3dhTIQ3N.uOjUbzs7aKNUWivkGh7I9Q.50hgmcLFsDabNx1wtZZPdQ">
-                                
+                                <label><input type="hidden" id="leadid_tcpa_disclosure"/></label>
+                                <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
+   
                                 <fieldset id="form-step1" class="form-steps fieldset-0" data-step="1" style="display: block;" data-tag="homeowner">
                                     <legend hidden="true">homeowner</legend>
                                     <h3 class="form_box-question">Are you a homeowner?</h3>
@@ -16678,7 +16679,7 @@ window._loq =[]
                                         const zip = $("#zip").val()
                                         //const ipadr = null
                                       //  console.log(ipadr);
-                                        const data = `campid=campid&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&street=${address}&email=${email}&city=${city}&state=${state}&zip=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=224&s2=${s2}`;
+                                        const data = `campid=campid&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&street=${address}&email=${email}&city=${city}&state=${state}&zip=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=224&s2=${s2}&universal_leadid=${jornaya}`;
                                         console.log('tf data')
                                         var payout = 0;
                                         console.log(data)
@@ -17087,6 +17088,19 @@ postCall("https://hooks.zapier.com/hooks/catch/12345456/3qz4o6z/", data).then(x 
         })(window, document, 'script', 'dataLayer', 'GTM-5SLK4FV');
     </script>
     <!-- End Google Tag Manager -->
+
+    <script id="LeadiDscript" type="text/javascript">
+(function() {
+var s = document.createElement('script');
+s.id = 'LeadiDscript_campaign';
+s.type = 'text/javascript';
+s.async = true;
+s.src = '//create.lidstatic.com/campaign/5374621e-589a-c13f-4050-4c5786b29246.js?snippet_version=2';
+var LeadiDscript = document.getElementById('LeadiDscript');
+LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
+})();
+</script>
+<noscript><img src='//create.leadid.com/noscript.gif?lac=FE5A6B76-3190-215D-18AE-036F796A10E7&lck=5374621e-589a-c13f-4050-4c5786b29246&snippet_version=2' /></noscript>
 
 
     <script type="text/javascript">
