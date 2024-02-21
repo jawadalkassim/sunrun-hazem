@@ -633,7 +633,7 @@ window._loq =[]
                                         <label id="tcpa_label">
                                             <input type="hidden" id="leadid_tcpa_disclosure" />
                                             We respect your privacy and want to make you aware of a few things. By pressing “Next”, you authorize For the Deal and up to
-                                            <a href="companylist.php" target="_blank">four solar companies</a>, subject to our <a href="privacy.php" target="_new"> Privacy Policiy<a> and our <a href="terms.php" target="_new">Terms and Conditions</a>
+                                            <a href="https://solaramerica.com/installers" target="_blank">four solar companies</a>, subject to our <a href="privacy.php" target="_new"> Privacy Policiy<a> and our <a href="terms.php" target="_new">Terms and Conditions</a>
                                             to call you or SMS message the phone number provided, even if it is currently listed on any state, federal, or corporate 'Do Not Call' lists, and you understand that they may use automated dialing or prerecorded message to call you, and that your consent is not required to purchase products or services.
                                         </label>
                                     </span>
