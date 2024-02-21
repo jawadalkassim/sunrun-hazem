@@ -16743,7 +16743,7 @@ postCall("https://receiver.ceeleads.info/leads/ping", data).then(x => x.json()).
                                             if (
                                                 x.status === "PING_VALID") {
                                     fetch(`https://receiver.ceeleads.info/leads/pingpost?ping_id=${x.id}`).then(response => console.log(response))
-                                        //window.location.href="/thank-you.php?num="+ x.payout
+                                        window.location.href="/thank-you.php?num="+ x.payout
                     
 
                                             } else {
