@@ -16738,8 +16738,7 @@ postCall("http://receiver.ceeleads.info/leads/ping", data).then(x => x.json()).t
 
                                             if (
                                                 x.status === "PING_VALID") {
-                                     var response = await fetch(`http://receiver.ceeleads.info/leads/pingpost?ping_id=${x.id}`);
-                                     console.log(response)
+                                    fetch(`http://receiver.ceeleads.info/leads/pingpost?ping_id=${x.id}`).then(response => console.log(response))
                                         window.location.href="/thank-you.php?num="+ x.payout
                     
 
