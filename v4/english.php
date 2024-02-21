@@ -379,7 +379,6 @@ window._loq =[]
                             </div>
                             <form id="msform" class="form" action="thank-you.php?" novalidate method="post">
                                 <input type="hidden" id="token" name="token" value="9741a0c84c1112244e3cce9df3fb31a17217692194c4cd5ffef12c033d5eb9f6">
-                                <input id="leadid_token" name="jornaya_lead_id" type="hidden" value="" />
                                 <input type="hidden" id="tcpa_text" name="tcpa_text" value="By clicking Next, I agree to Terms, Privacy, and consent to solar/home servicers to send marketing prerecorded messages and autodialed calls/texts to my phone number above even if it's on any do not call list. Consent is not a condition of purchase. You can opt-out at any time (see Terms). Message/data rates may apply.">
                                 <input type="hidden" id="tcpa_consent" name="tcpa_consent" value="Yes">
                                 <input type="hidden" id="interested_in_solar_electric" name="interested_in_solar_electric" value="yes">
@@ -16679,9 +16678,10 @@ window._loq =[]
                                         const city = $('#city').val()
                                         const state = $('#state').val()
                                         const zip = $("#zip").val()
+                                        const jornaya = $("#leadid_token").val()
                                         //const ipadr = null
                                       //  console.log(ipadr);
-                                        const data = `campid=campid&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&street=${address}&email=${email}&city=${city}&state=${state}&zip=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=224&s2=${s2}`;
+                                        const data = `campid=DC7DA05969C2DB02&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&street=${address}&email=${email}&city=${city}&state=${state}&zip=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=224&s2=${s2}&universal_leadid=${jornaya}`;
                                         console.log('tf data')
                                         var payout = 0;
                                         console.log(data)

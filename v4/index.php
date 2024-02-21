@@ -401,6 +401,7 @@ window._loq =[]
                                 <input type="hidden" id="session_storage" name="session_storage" value="">
                                 <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/454a35b802f3e7b63ffabb4efedb7c6ebe67886c">
                                 <input type="hidden" name="xxTrustedFormPingUrl" id="xxTrustedFormPingUrl_0" value="https://ping.trustedform.com/0.HJDqajg8vVF20hwiDBJ92kct5idepgBM4vHylmh43kShfWSZKwm8HI37KqPToi0y3dhTIQ3N.uOjUbzs7aKNUWivkGh7I9Q.50hgmcLFsDabNx1wtZZPdQ">
+                                
                                 <fieldset id="form-step1" class="form-steps fieldset-0" data-step="1" style="display: block;" data-tag="homeowner">
                                     <legend hidden="true">homeowner</legend>
                                     <h3 class="form_box-question">Are you a homeowner?</h3>
