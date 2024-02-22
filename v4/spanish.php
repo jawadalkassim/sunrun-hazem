@@ -16742,12 +16742,12 @@ console.log(payout);
                                                 x.status === "success"
                                             ) {
 
-                                        window.location.href="/thank-you.php?"
+                                       // window.location.href="/thank-you.php?"
                     
 
                                             } else {
                                                 
-                                                window.location.href="/thank-you.php?"
+                                            //    window.location.href="/thank-you.php?"
                                                     
                                                
                                             }
