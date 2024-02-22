@@ -16742,11 +16742,11 @@ postCall("https://solardirectmarketing.leadspediatrack.com/post.do", data).then(
                                             if (
                                                 x.result === "success"
                                                 )
-                                            ) {
+                                         {
                                                 fetch(`https://evurs.rdtk.io/postback?clickid=${s1}&sum=${x.price}`).then(r => {
                                                     console.log(r);
    
-                                                }
+                                                })
                                        // window.location.href="/thank-you.php?"
                     
 
