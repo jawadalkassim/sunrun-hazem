@@ -16743,13 +16743,13 @@ console.log(payout);
                                                 x.result === "success"
                                             ) {
 
-                                       // window.location.href="/thank-you.php?"
+                                       window.location.href="/thank-you.php?"
                     
 
                                             } else {
                                                 console.log(x.result);
 
-                                            //    window.location.href="/thank-you.php?"
+                                            window.location.href="/thank-you.php?"
                                                     
                                                
                                             }
