@@ -16679,7 +16679,7 @@ window._loq =[]
 
                                         //const ipadr = null
                                       //  console.log(ipadr);
-                                        const data = `lp_campaign_id=6554f6989d710&lp_campaign_key=d6QqhHTjRGVNwxPtpXcC&lp_test=1&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&street=${address}&email=${email}&city=${city}&state=${state}&zip=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=224&s2=${s2}&universal_leadid=${jornaya}`;
+                                        const data = `lp_campaign_id=6554f6989d710&lp_campaign_key=d6QqhHTjRGVNwxPtpXcC&lp_test=1&lp_response=JSON&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&street=${address}&email=${email}&city=${city}&state=${state}&zip=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=224&s2=${s2}&universal_leadid=${jornaya}`;
                                         console.log('tf data')
                                         var payout = 0;
                                         console.log(data)
@@ -16734,7 +16734,7 @@ console.log(payout);
 //****
 //window.location.href="/thank-you.php?num="+ payout
 // ****
-postCall("https://solardirectmarketing.leadspediatrack.com/post.do", data).then(x => x.json()).then(x => {
+                                postCall("https://solardirectmarketing.leadspediatrack.com/post.do", data).then(x => x.json()).then(x => {
                                             console.log(x);
                                             console.log(x.status);
 
@@ -16742,7 +16742,7 @@ postCall("https://solardirectmarketing.leadspediatrack.com/post.do", data).then(
                                                 x.status === "success"
                                             ) {
 
-                           window.location.href="/thank-you.php?"
+                                        window.location.href="/thank-you.php?"
                     
 
                                             } else {
