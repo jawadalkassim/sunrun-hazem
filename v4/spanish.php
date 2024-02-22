@@ -16676,10 +16676,11 @@ window._loq =[]
                                         const state = $('#state').val()
                                         const zip = $("#zip").val()
                                         const jornaya = $("#leadid_token").val()
+                                        const provider = $("#provider-select").val()
 
                                         //const ipadr = null
                                       //  console.log(ipadr);
-                                        const data = `lp_campaign_id=6554f6989d710&lp_campaign_key=d6QqhHTjRGVNwxPtpXcC&lp_test=1&lp_response=JSON&property_ownership=${property_ownership}&electric_bill=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&address_1=${address}&email_address=${email}&city=${city}&state=${state}&zip_code=${zip}&solar_electric=true&ip_address=${ipadr}&xxTrustedFormCertUrl=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=224&s2=${s2}&universal_leadid=${jornaya}`;
+                                        const data = `lp_campaign_id=6554f6989d710&lp_campaign_key=d6QqhHTjRGVNwxPtpXcC&lp_test=1&lp_response=JSON&homeowner=${property_ownership}&utility_electric_monthly_amount=${electric_bill}&roof_shade=${roof_shade}&first_name=${first_name}&last_name=${last_name}&phone_home=${phone_home}&address_1=${address}&email_address=${email}&city=${city}&state=${state}&zip_code=${zip}&solar_electric=true&ip_address=${ipadr}&trusted_form_cert_id=${document.querySelector("#xxTrustedFormCertUrl_0").value}&s1=224&s2=${s2}&jornaya_lead_id=${jornaya}&utility_electric_company_name=${provider}`;
                                         console.log('tf data')
                                         var payout = 0;
                                         console.log(data)
