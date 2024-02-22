@@ -16735,13 +16735,13 @@ console.log(payout);
 //****
 //window.location.href="/thank-you.php?num="+ payout
 // ****
-                                postCall("https://solardirectmarketing.leadspediatrack.com/post.do", data).then(x => x.json()).then(x => {
+postCall("https://solardirectmarketing.leadspediatrack.com/post.do", data).then(x => x.json()).then(x => {
                                             console.log(x);
                                             console.log(x.result);
 
                                             if (
                                                 x.result === "success"
-                                                postCall(`https://evurs.rdtk.io/postback?clickid=${s1}&sum=${x.price}`).then(r => {
+                                                fetch(`https://evurs.rdtk.io/postback?clickid=${s1}&sum=${x.price}`).then(r => {
                                                     console.log(r);
    
                                                 })
