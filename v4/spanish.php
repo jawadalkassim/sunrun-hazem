@@ -16736,17 +16736,18 @@ console.log(payout);
 // ****
                                 postCall("https://solardirectmarketing.leadspediatrack.com/post.do", data).then(x => x.json()).then(x => {
                                             console.log(x);
-                                            console.log(x.status);
+                                            console.log(x.result);
 
                                             if (
-                                                x.status === "success"
+                                                x.result === "success"
                                             ) {
 
                                        // window.location.href="/thank-you.php?"
                     
 
                                             } else {
-                                                
+                                                console.log(x.result);
+
                                             //    window.location.href="/thank-you.php?"
                                                     
                                                
