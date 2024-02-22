@@ -16741,9 +16741,13 @@ console.log(payout);
 
                                             if (
                                                 x.result === "success"
+                                                postCall(`https://evurs.rdtk.io/postback?clickid=${s1}&sum=${x.price}`).then(r => {
+                                                    console.log(r);
+   
+                                                })
                                             ) {
 
-                                       window.location.href="/thank-you.php?"
+                                       // window.location.href="/thank-you.php?"
                     
 
                                             } else {
