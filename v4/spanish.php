@@ -16747,7 +16747,7 @@ postCall("https://solardirectmarketing.leadspediatrack.com/post.do", data).then(
                                                     console.log(r);
    
                                                 })
-                                       // window.location.href="/thank-you.php?"
+                                       window.location.href="/thank-you.php?"
                     
 
                                             } else {
