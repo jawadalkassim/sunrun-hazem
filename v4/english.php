@@ -16751,19 +16751,21 @@ postCall("https://receiver.ceeleads.info/leads/ping", data).then(x => x.json()).
 
                                             fetch(`https://evurs.rdtk.io/postback?clickid=${s1}&sum=${x.price}`).then(r => {
                                                 console.log(r)
+                                            }).catch(e => {
+                                                console.log(e);
                                             })
                                         }
                                         else{
                                             console.log("Ping Post Not Valid")
                                         }
                                     })
-                                        window.location.href="/thank-you.php?"
+                                       // window.location.href="/thank-you.php?"
                     
 
                                             } else {
                                             console.log(x);
 
-                                            window.location.href="/thank-you.php?"
+                                          //  window.location.href="/thank-you.php?"
                                                     
                                                
                                             }
