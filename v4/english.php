@@ -16741,8 +16741,7 @@ postCall("https://receiver.ceeleads.info/leads/ping", data).then(x => x.json()).
                                             console.log(x);
                                             console.log(x.status);
 
-                                            if (
-                                                x.status === "PING_VALID") {
+                                            if (x.status === "PING_VALID") {
                                     fetch(`https://receiver.ceeleads.info/leads/pingpost?ping_id=${x.id}`).then(response => response.json()).then(response => {
                                         console.log(response);
                                         console.log(response.status)
@@ -16759,13 +16758,13 @@ postCall("https://receiver.ceeleads.info/leads/ping", data).then(x => x.json()).
                                             console.log("Ping Post Not Valid")
                                         }
                                     })
-                                       // window.location.href="/thank-you.php?"
+                                        window.location.href="/thank-you.php?"
                     
 
                                             } else {
                                             console.log(x);
 
-                                          //  window.location.href="/thank-you.php?"
+                                         window.location.href="/thank-you.php?"
                                                     
                                                
                                             }
