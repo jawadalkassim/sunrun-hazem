@@ -16744,6 +16744,8 @@ postCall("https://receiver.ceeleads.info/leads/ping", data).then(x => x.json()).
                                             if (
                                                 x.status === "PING_VALID") {
                                     fetch(`https://receiver.ceeleads.info/leads/pingpost?ping_id=${x.id}`).then(response => {
+                                        console.log(response);
+                                        console.log(response.status)
 
                                         if (response.status == "PING_POST_VALID"){
 
