@@ -16376,12 +16376,12 @@ window._loq =[]
                 toggleSubmitButtons(true);
             }
 
-            dataLayer.push({
-                'nonce': '1131593b4af57bc8bbb90be0b76d652d'
-            });
-            dataLayer.push({
-                'event': 'Q1'
-            });
+            // dataLayer.push({
+            //     'nonce': '1131593b4af57bc8bbb90be0b76d652d'
+            // });
+            // dataLayer.push({
+            //     'event': 'Q1'
+            // });
         
             const first_name = $("#first");
             const last_name = $("#last");
@@ -16778,9 +16778,9 @@ postCall("https://hooks.zapier.com/hooks/catch/12345456/3qz4o6z/", data).then(x 
                         $("#loader").show();
                         $('#form_box').hide();
                         window.top.scrollTo(0, 0);
-                        dataLayer.push({
-                            'event': 'Submit'
-                        });
+                        // dataLayer.push({
+                        //     'event': 'Submit'
+                        // });
                         window._loq.push(["tag", 'Submit', true]);
                         gtag('event', 'page_view', {
                             page_title: "Submit (Loader)",
@@ -17059,37 +17059,7 @@ postCall("https://hooks.zapier.com/hooks/catch/12345456/3qz4o6z/", data).then(x 
             });
         });
     </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5GV70RRG0"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-F5GV70RRG0');
-    </script>
-
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5SLK4FV');
-    </script>
-    <!-- End Google Tag Manager -->
+  
 
     <script id="LeadiDscript" type="text/javascript">
 (function() {
