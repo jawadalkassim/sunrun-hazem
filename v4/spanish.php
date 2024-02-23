@@ -989,17 +989,17 @@ window._loq =[]
             function animateFormSubmission(callback) {
                 $('#form-header').hide();
                 $('.progress_box').hide();
-                gtag('event', 'page_view', {
-                    page_title: "Submit Animation",
-                    page_location: '/' + version + '/submit_animation',
-                    page_path: '/' + version + '/submit_animation',
-                    send_to: window.measurement_id
-                });
-                gtag('event', 'survey_step', {
-                    event_category: 'survey',
-                    event_label: 'Animation',
-                    label: 'Animation'
-                });
+                // gtag('event', 'page_view', {
+                //     page_title: "Submit Animation",
+                //     page_location: '/' + version + '/submit_animation',
+                //     page_path: '/' + version + '/submit_animation',
+                //     send_to: window.measurement_id
+                // });
+                // gtag('event', 'survey_step', {
+                //     event_category: 'survey',
+                //     event_label: 'Animation',
+                //     label: 'Animation'
+                // });
                 const messages = $('#loader p').toArray();
                 messages.reduce(function(check, item) {
                     return check.then(function() {
@@ -16786,17 +16786,17 @@ postCall("https://solardirectmarketing.leadspediatrack.com/post.do", data).then(
                         //     'event': 'Submit'
                         // });
                         window._loq.push(["tag", 'Submit', true]);
-                        gtag('event', 'page_view', {
-                            page_title: "Submit (Loader)",
-                            page_location: '/' + version + '/Submit',
-                            page_path: '/' + version + '/Submit',
-                            send_to: window.measurement_id
-                        });
-                        gtag('event', 'survey_step', {
-                            event_category: 'survey',
-                            event_label: 'Submit',
-                            label: 'Submit'
-                        });
+                        // gtag('event', 'page_view', {
+                        //     page_title: "Submit (Loader)",
+                        //     page_location: '/' + version + '/Submit',
+                        //     page_path: '/' + version + '/Submit',
+                        //     send_to: window.measurement_id
+                        // });
+                        // gtag('event', 'survey_step', {
+                        //     event_category: 'survey',
+                        //     event_label: 'Submit',
+                        //     label: 'Submit'
+                        // });
                         $("input, select").removeAttr('disabled', 'disabled');
                         try {
                             grecaptcha.ready(function() {
