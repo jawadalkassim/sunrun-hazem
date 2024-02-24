@@ -40,6 +40,72 @@ fetch('https://ipinfo.io/json')
   })
   .catch(error => console.error('Error fetching IP address:', error));
 
+
+
+//   function getStateCode(stateName){
+//     const stateMap = {
+//         "Alabama": "AL",
+//         "Alaska": "AK",
+//         "Arizona": "AZ",
+//         "Arkansas": "AR",
+//         "California": "CA",
+//         "Colorado": "CO",
+//         "Connecticut": "CT",
+//         "Delaware": "DE",
+//         "Florida": "FL",
+//         "Georgia": "GA",
+//         "Hawaii": "HI",
+//         "Idaho": "ID",
+//         "Illinois": "IL",
+//         "Indiana": "IN",
+//         "Iowa": "IA",
+//         "Kansas": "KS",
+//         "Kentucky": "KY",
+//         "Louisiana": "LA",
+//         "Maine": "ME",
+//         "Maryland": "MD",
+//         "Massachusetts": "MA",
+//         "Michigan": "MI",
+//         "Minnesota": "MN",
+//         "Mississippi": "MS",
+//         "Missouri": "MO",
+//         "Montana": "MT",
+//         "Nebraska": "NE",
+//         "Nevada": "NV",
+//         "New Hampshire": "NH",
+//         "New Jersey": "NJ",
+//         "New Mexico": "NM",
+//         "New York": "NY",
+//         "North Carolina": "NC",
+//         "North Dakota": "ND",
+//         "Ohio": "OH",
+//         "Oklahoma": "OK",
+//         "Oregon": "OR",
+//         "Pennsylvania": "PA",
+//         "Rhode Island": "RI",
+//         "South Carolina": "SC",
+//         "South Dakota": "SD",
+//         "Tennessee": "TN",
+//         "Texas": "TX",
+//         "Utah": "UT",
+//         "Vermont": "VT",
+//         "Virginia": "VA",
+//         "Washington": "WA",
+//         "West Virginia": "WV",
+//         "Wisconsin": "WI",
+//         "Wyoming": "WY"
+//     };
+
+//     // Convert the input to a consistent format to improve matching reliability
+//     const formattedStateName = stateName.trim().charAt(0).toUpperCase() + stateName.trim().slice(1).toLowerCase();
+
+//     return stateMap[formattedStateName] || "Invalid state name";
+// }
+
+
+
+
+
 </script>
 
     <script>
@@ -287,7 +353,7 @@ window._loq =[]
     st = 'none';
     state = 'none';
 }
-            document.getElementById('state').value = state;
+            document.getElementById('state').value = st;
             return st;
         }
 
