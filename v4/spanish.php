@@ -286,7 +286,7 @@ window._loq =[]
     st = 'none';
     state = 'none';
 }
-            document.getElementById('state').value = state;
+            document.getElementById('state').value = st;
             return st;
         }
 
