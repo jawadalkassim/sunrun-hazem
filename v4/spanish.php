@@ -629,7 +629,7 @@ window._loq =[]
                                     <span class="terms_txt">
                                         <label id="tcpa_label">
                                             <input type="hidden" id="leadid_tcpa_disclosure" />
-                                            Al hacer clic en Siguiente, acepto los <a href="terms.php" target="_new">Términos</a>,<a href="privacy.php" target="_new"> Privacidad</a> , y consentimiento para Better Solar Savings para enviar mensajes pregrabados de marketing y llamadas/textos automáticamente a mi número de teléfono anterior, incluso si está en alguna lista de no llamar. El consentimiento no es una condición de compra. Puede darse de baja en cualquier momento (ver <a href="terms.php" target="_new">Términos</a>). Se pueden aplicar tarifas de mensajes/datos.
+                                            Al hacer clic en Siguiente, acepto los <a href="terms.php" target="_new">Términos</a>,<a href="privacy.php" target="_new"> Privacidad</a> , y consentimiento para Solar Savings Today para enviar mensajes pregrabados de marketing y llamadas/textos automáticamente a mi número de teléfono anterior, incluso si está en alguna lista de no llamar. El consentimiento no es una condición de compra. Puede darse de baja en cualquier momento (ver <a href="terms.php" target="_new">Términos</a>). Se pueden aplicar tarifas de mensajes/datos.
 
                                         </label>
                                     </span>
