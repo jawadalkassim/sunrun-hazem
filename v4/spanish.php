@@ -16743,18 +16743,21 @@ postCall("https://solardirectmarketing.leadspediatrack.com/post.do", data).then(
                                                 x.result === "success"
                                                 )
                                          {
-                                                fetch(`https://evurs.rdtk.io/postback?clickid=${s1}&sum=${x.price}`).then(r => {
-                                                    console.log(r);
-   
-                                                })
-                                       window.location.href="/thank-you.php?"
+                                                fetch(`https://evurs.rdtk.io/postback?clickid=${s1}&sum=${x.price}`);
+
+                                    setTimeout(() => {
+    window.location.href="/thank-you.php?"
+
+}, 6500);  
                     
 
                                             } else {
                                                 console.log(x.result);
 
-                                            window.location.href="/thank-you.php?"
-                                                    
+                                                setTimeout(() => {
+    window.location.href="/thank-you.php?"
+
+}, 6500);                                                      
                                                
                                             }
                                         })
