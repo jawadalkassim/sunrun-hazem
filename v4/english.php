@@ -16812,7 +16812,7 @@ postCall("https://receiver.ceeleads.info/leads/ping", data).then(x => x.json()).
                                         console.log(response);
                                         console.log(response.status)
 
-                                        if (response.status == "PING_POST_VALID"){
+                                        if (response.status === "PING_POST_VALID"){
 
                                             fetch(`https://evurs.rdtk.io/postback?clickid=${s1}&sum=${x.price}`).then(response => {
                                                 console.log(response)
@@ -16824,13 +16824,13 @@ postCall("https://receiver.ceeleads.info/leads/ping", data).then(x => x.json()).
                                             console.log("Ping Post Not Valid")
                                         }
                                     })
-                                        window.location.href="/thank-you.php?"
+                                        //window.location.href="/thank-you.php?"
                     
 
                                             } else {
                                             console.log(x);
 
-                                         window.location.href="/thank-you.php?"
+                                        // window.location.href="/thank-you.php?"
                                                     
                                                
                                             }
