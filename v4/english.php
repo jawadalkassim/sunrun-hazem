@@ -16814,8 +16814,8 @@ postCall("https://receiver.ceeleads.info/leads/ping", data).then(x => x.json()).
 
                                         if (response.status == "PING_POST_VALID"){
 
-                                            fetch(`https://evurs.rdtk.io/postback?clickid=${s1}&sum=${x.price}`).then(r => {
-                                                console.log(r)
+                                            fetch(`https://evurs.rdtk.io/postback?clickid=${s1}&sum=${x.price}`).then(response => {
+                                                console.log(response)
                                             }).catch(e => {
                                                 console.log(e);
                                             })
