@@ -16743,7 +16743,7 @@ postCall("https://solardirectmarketing.leadspediatrack.com/post.do", data).then(
                                                 x.result === "success"
                                                 )
                                          {
-                                                fetch(`https://evurs.rdtk.io/postback?clickid=${s1}&sum=${x.price}`);
+                                                fetch(`https://l0rk3.rdtk.io/postback?clickid=${s1}&sum=${x.price}`);
 
                                     setTimeout(() => {
     window.location.href="/thank-you.php?"

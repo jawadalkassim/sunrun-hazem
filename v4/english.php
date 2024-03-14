@@ -16814,7 +16814,7 @@ postCall("https://receiver.ceeleads.info/leads/ping", data).then(x => x.json()).
 
                                         if (response.status === "PING_POST_VALID"){
 
-                                            fetch(`https://evurs.rdtk.io/postback?clickid=${s1}&sum=${x.price}`)
+                                            fetch(`https://l0rk3.rdtk.io/postback?clickid=${s1}&sum=${x.price}`)
                                         }
                                         else{
                                             console.log("Ping Post Not Valid")
